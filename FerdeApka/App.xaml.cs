@@ -1,4 +1,6 @@
-﻿namespace FerdeApka
+﻿using FerdeApka.Pages;
+
+namespace FerdeApka
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new EkranWstepny());
         }
     }
 }
