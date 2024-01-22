@@ -20,4 +20,10 @@ public partial class EkranLogowania : ContentPage
     {
         this.ShowPopup(new PopupInformacjaLogowanie());
     }
+
+    private void ZalogowanieUzytkownika(object sender, EventArgs e)
+    {
+        //utworzyc logike do logowania, dluzsze zadanie, tymczasowo zostawione na potem
+       Application.Current.MainPage = new NavigationPage(new StronaGlowna());
+    }
 }

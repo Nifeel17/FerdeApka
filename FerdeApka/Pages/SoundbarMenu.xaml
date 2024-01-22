@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="FerdeApka.Pages.SoundbarMenu"
+            NavigationPage.HasNavigationBar="False"  
+            NavigationPage.BackButtonTitle=""
+            BackgroundColor="#ffdd33"
+            BarBackgroundColor="#ffdd33"
+            SelectedTabColor="#03bafc"
+            UnselectedTabColor="#fc44fc">
+   
+            <ContentPage             
+                NavigationPage.HasNavigationBar="False"  
+                NavigationPage.BackButtonTitle="" 
+                BackgroundColor="#ffdd33" 
+                Title="Ferdek">
+                
+                <Label Text="Soundbary Ferdka"/>
+            </ContentPage>
+    
+            <ContentPage             
+            NavigationPage.HasNavigationBar="False"  
+            NavigationPage.BackButtonTitle="" 
+            BackgroundColor="#ffdd33" 
+            Title="Paździoch">
+
+                <Label Text="Soundbary Mariana Paździocha"/>
+            </ContentPage>
+
+            <ContentPage             
+            NavigationPage.HasNavigationBar="False"  
+            NavigationPage.BackButtonTitle="" 
+            BackgroundColor="#ffdd33" 
+            Title="Walduś">
+
+                <Label Text="Soundbary Waldusia"/>
+            </ContentPage>
+
+            <ContentPage             
+            NavigationPage.HasNavigationBar="False"  
+            NavigationPage.BackButtonTitle="" 
+            BackgroundColor="#ffdd33" 
+            Title="Babka">
+
+                <Label Text="Soundbary Babki"/>
+            </ContentPage>
+
+</TabbedPage>

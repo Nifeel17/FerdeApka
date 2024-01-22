@@ -34,7 +34,7 @@
             <Entry x:Name="haslo_uzytkownika_entry" Grid.Row="3" BackgroundColor="#737272"  Margin="0,0,0,5"/>
         </Grid>
         <Frame BackgroundColor="#03bafc" CornerRadius="10" HeightRequest="15" Margin="20,20,20,0" Padding="0" HorizontalOptions="FillAndExpand" />
-        <Button x:Name="login_button_logowanie" Text="Zaloguj!" TextColor="White" FontSize="24"  BackgroundColor="#fc44fc" Margin="40, 50, 40, 0" HeightRequest="70" CornerRadius="20"/>
+        <Button x:Name="login_button_logowanie" Clicked="ZalogowanieUzytkownika" Text="Zaloguj!" TextColor="White" FontSize="24"  BackgroundColor="#fc44fc" Margin="40, 50, 40, 0" HeightRequest="70" CornerRadius="20"/>
         <Label Text="Klikajac przycik Zaloguj sie! zgadzasz sie na warunki umowy użytkownika" FontSize="18" TextColor="Black" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="20,20,20,0"/>
 
     </VerticalStackLayout>
