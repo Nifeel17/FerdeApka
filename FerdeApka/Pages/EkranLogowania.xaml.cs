@@ -1,4 +1,7 @@
 
+using CommunityToolkit.Maui.Views;
+using FerdeApka.Pages.Popuppages;
+
 namespace FerdeApka.Pages;
 
 public partial class EkranLogowania : ContentPage
@@ -13,5 +16,8 @@ public partial class EkranLogowania : ContentPage
         await Navigation.PopAsync();
     }
 
-    //utworzyc popup do drugiego przycisku
+    private void PopupInfoOLogowaniu(object sender, EventArgs e)
+    {
+        this.ShowPopup(new PopupInformacjaLogowanie());
+    }
 }

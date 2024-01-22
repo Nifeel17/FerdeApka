@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+             x:Class="FerdeApka.Pages.Popuppages.PopupLogowanieZFacebooka"
+             CanBeDismissedByTappingOutsideOfPopup="True"
+            Size="300, 200"
+            Color="#ffdd33">
+    <StackLayout>
+        <Label Text="Logowanie z Facebooka"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" 
+           FontAttributes="Bold"
+           FontSize="24"/>
+        <Label Text="Człowieku szanuj się" 
+           VerticalOptions="Center"
+           HorizontalOptions="Center" 
+           FontSize="18"/>
+        <Label Text="Kto jeszcze używa Facebooka?" 
+           VerticalOptions="Center"
+           HorizontalOptions="Center" 
+           FontSize="15"/>
+        <Button Clicked="Zamknij_Popup_Facebooka" 
+            Text="Masz racje!" 
+            TextColor="White" 
+            VerticalOptions="Center"
+            HorizontalOptions="Center" 
+            FontSize="24"  
+            BackgroundColor="#fc44fc" 
+            Margin="20" 
+            HeightRequest="70" 
+            CornerRadius="20"/>
+        </StackLayout>
+</mct:Popup>
