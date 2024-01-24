@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+             x:Class="FerdeApka.Pages.Popuppages.PopupInfoOAplikacji"
+             CanBeDismissedByTappingOutsideOfPopup="True"
+            Size="350, 250"
+            Color="#ffdd33">
+    <StackLayout>
+        <Label Text="O aplikacji"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" 
+           FontAttributes="Bold"
+               Margin="0,10,0,0"
+           FontSize="24"/>
+        <Label Text="Apka przeznaczona dla fanów" 
+           VerticalOptions="Center"
+           HorizontalOptions="Center" 
+           FontSize="18"/>
+        <Label Text="Świata według Kiepskich" 
+           VerticalOptions="Center"
+           HorizontalOptions="Center" 
+           FontSize="18"/>
+        <Label Text="Ktoś może chce wykupić tu reklame?" 
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           FontSize="15"/>
+        <Label Text="Zapraszam na priv" 
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           FontSize="15"/>
+        <Button Clicked="Zamknij_Popup_Informacji" 
+            Text="Rozumiem!" 
+            TextColor="White" 
+            VerticalOptions="Center"
+            HorizontalOptions="Center" 
+            FontSize="24"  
+            BackgroundColor="#fc44fc" 
+            Margin="20" 
+            HeightRequest="70" 
+            CornerRadius="20"/>
+    </StackLayout>
+</mct:Popup>

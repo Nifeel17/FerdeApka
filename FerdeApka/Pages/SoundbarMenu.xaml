@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
             x:Class="FerdeApka.Pages.SoundbarMenu"
             NavigationPage.HasNavigationBar="False"  
             NavigationPage.BackButtonTitle=""
@@ -14,9 +15,43 @@
                 NavigationPage.BackButtonTitle="" 
                 BackgroundColor="#ffdd33" 
                 Title="Ferdek">
+                <ScrollView>
+                    <StackLayout>
                 
-                <Label Text="Soundbary Ferdka"/>
+                        <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
+                            <toolkit:MediaElement x:Name="DzwiekCoWTymSmiesznego" WidthRequest="400" HeightRequest="300" Source="embed://Cowtymsmisznego.mp4" IsVisible="False"/>
+                            <toolkit:MediaElement x:Name="DzwiekFakJu" WidthRequest="400" HeightRequest="300" Source="embed://Fakju.mp4" IsVisible="False"/>
+                            <Button Text="Co w tym smiesznego?" Clicked="SoundbarDzwiekCoWTymSmisznegoZagraj" x:Name="SoundbarButtonDzwiekCoWTymSmiesznego" BackgroundColor="#fc44fc" WidthRequest="150" Margin="10"/>
+                            <Button Text="Fak ju!" Clicked="SoundbarDzwiekFakJuZagraj" x:Name="SoundbarButtonDzwiekFakJu" BackgroundColor="#fc44fc" WidthRequest="150" Margin="10"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Button Text="1" BackgroundColor="#fc44fc" WidthRequest="150" Margin="10"/>
+                            <Button Text="2" BackgroundColor="#fc44fc" WidthRequest="150" Margin="10"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Button Text="1" BackgroundColor="#fc44fc" WidthRequest="150" Margin="10"/>
+                            <Button Text="2" BackgroundColor="#fc44fc" WidthRequest="150" Margin="10"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Button Text="1" BackgroundColor="#fc44fc" WidthRequest="150" Margin="10"/>
+                            <Button Text="2" BackgroundColor="#fc44fc" WidthRequest="150" Margin="10"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Button Text="1" BackgroundColor="#fc44fc" WidthRequest="150" Margin="10"/>
+                            <Button Text="2" BackgroundColor="#fc44fc" WidthRequest="150" Margin="10"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Button Text="1" BackgroundColor="#fc44fc" WidthRequest="150" Margin="10"/>
+                            <Button Text="2" BackgroundColor="#fc44fc" WidthRequest="150" Margin="10"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
             </ContentPage>
+    
+    
+    
+    
+    
     
             <ContentPage             
             NavigationPage.HasNavigationBar="False"  

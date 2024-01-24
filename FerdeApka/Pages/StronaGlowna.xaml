@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="FerdeApka.Pages.StronaGlowna"
              NavigationPage.HasNavigationBar="False"  
              NavigationPage.BackButtonTitle="">
     <StackLayout BackgroundColor="#ffdd33">
-        <Label x:Name="PowitanieUzytkownikaNaStronieGlownej" FontSize="24" TextColor="black" Margin="20,5,0,20" Text="Witaj NAZWA_UZYTKOWNIKA"/>
-        <Label Text="Ferde apka" FontAttributes="Bold"  HorizontalOptions="Center" FontSize="48" TextColor="Black"/>
+        <Label Text="Ferde apka" FontAttributes="Bold"  HorizontalOptions="Center" FontSize="48" Margin="0,30,0,0" TextColor="Black"/>
         <Frame BackgroundColor="#03bafc" CornerRadius="10" HeightRequest="15" Margin="20,30,20,0" Padding="0" HorizontalOptions="FillAndExpand" />
         <Button Text="Soundboard" Clicked="PrzejdzDoStronySoundbarow" x:Name="PrzekierowanieDoSoundbaru" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="#fc44fc"/>
         <Button Text="Quizy" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="#fc44fc"/>
-        <Button Text="O aplikacji" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="#fc44fc"/>
+        <Button Text="O aplikacji" Clicked="PokazPopupOAplikacji" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="#fc44fc"/>
+        <toolkit:MediaElement x:Name="DzwiekNaGlownymEkranie" WidthRequest="400" HeightRequest="300" Source="embed://Fakju.mp4" IsVisible="False"/>
+        <ImageButton Source="logoferdek.png" BackgroundColor="#ffdd33" x:Name="PrzyciskLogoFerdkaNacisniety" HeightRequest="250" WidthRequest="250" Margin="0,20,0,0" Clicked="LogoFerdkaKlikniete" VerticalOptions="Center"/>
     </StackLayout>
 </ContentPage>
