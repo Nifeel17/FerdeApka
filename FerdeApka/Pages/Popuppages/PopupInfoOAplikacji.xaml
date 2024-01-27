@@ -5,7 +5,7 @@
              x:Class="FerdeApka.Pages.Popuppages.PopupInfoOAplikacji"
              CanBeDismissedByTappingOutsideOfPopup="True"
             Size="350, 250"
-            Color="#ffdd33">
+            Color="{StaticResource ZoltyFerdkowy}">
     <StackLayout>
         <Label Text="O aplikacji"
            VerticalOptions="Center" 
@@ -35,7 +35,7 @@
             VerticalOptions="Center"
             HorizontalOptions="Center" 
             FontSize="24"  
-            BackgroundColor="#fc44fc" 
+            BackgroundColor="{StaticResource RozowyFerdkowy}" 
             Margin="20" 
             HeightRequest="70" 
             CornerRadius="20"/>

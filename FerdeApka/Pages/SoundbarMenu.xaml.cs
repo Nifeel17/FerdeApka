@@ -28,6 +28,6 @@ public partial class SoundbarMenu : TabbedPage
         {
             DzwiekFakJu.SeekTo(TimeSpan.Zero);
             DzwiekFakJu.Play();
-        }
+        } //jsony do quizow, wlasna czcionka, baza danych do logowania, ikonka, splash screen
     }
 }

@@ -5,7 +5,7 @@
              x:Class="FerdeApka.Pages.Popuppages.PopupLogowanieZFacebooka"
              CanBeDismissedByTappingOutsideOfPopup="True"
             Size="300, 200"
-            Color="#ffdd33">
+            Color="{StaticResource ZoltyFerdkowy}">
     <StackLayout>
         <Label Text="Logowanie z Facebooka"
            VerticalOptions="Center" 
@@ -26,7 +26,7 @@
             VerticalOptions="Center"
             HorizontalOptions="Center" 
             FontSize="24"  
-            BackgroundColor="#fc44fc" 
+            BackgroundColor="{StaticResource RozowyFerdkowy}" 
             Margin="20" 
             HeightRequest="70" 
             CornerRadius="20"/>
