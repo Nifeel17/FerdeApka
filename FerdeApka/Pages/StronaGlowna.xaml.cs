@@ -28,4 +28,9 @@ public partial class StronaGlowna : ContentPage
             DzwiekNaGlownymEkranie.Play();
         }
     }
+
+    private async void PrzejdzDoStronyQuizow(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new StronaWybieraniaQuizow());
+    }
 }

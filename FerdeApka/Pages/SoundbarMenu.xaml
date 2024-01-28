@@ -11,7 +11,7 @@
             UnselectedTabColor="{StaticResource RozowyFerdkowy}">
    
             <ContentPage             
-                NavigationPage.HasNavigationBar="False"  
+                NavigationPage.HasNavigationBar="False"
                 NavigationPage.BackButtonTitle="" 
                 BackgroundColor="{StaticResource ZoltyFerdkowy}" 
                 Title="Ferdek">
