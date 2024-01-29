@@ -10,5 +10,6 @@ namespace FerdeApka.Classes
     {
         public string Tytul {  get; set; }
         public string ShortTitle {  get; set; }
+        public string Xnazwa { get; set; }
     }
 }
