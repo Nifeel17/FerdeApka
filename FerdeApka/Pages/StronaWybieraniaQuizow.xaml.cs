@@ -14,9 +14,9 @@ public partial class StronaWybieraniaQuizow : ContentPage
         await Navigation.PushAsync(new StronaQuizu("Quiz o postaciach"));
     }
 
-    private async void PrzejdzDoStronyzQuziemOAutorach(object sender, EventArgs e)
+    private async void PrzejdzDoStronyzQuziemOOdcinkach(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new StronaQuizu("Quiz o autorach"));
+        await Navigation.PushAsync(new StronaQuizu("Quiz o odcinkach"));
     }
 
 }

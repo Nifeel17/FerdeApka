@@ -7,13 +7,14 @@
              NavigationPage.BackButtonTitle="">
 
     <StackLayout>
-        <Label Text="Pytanie 5" HorizontalOptions="Center" Padding="0,30,0,30" FontSize="36"/>
-        <Label Text="Cos poszlo nie tak" FontSize="24" HorizontalOptions="Center" HorizontalTextAlignment="Center" x:Name="LabelNazwyQuizu" Padding="0,0,0,30"/>
+        <Label Text="Pytanie 1" x:Name="LabelKtorePytanie" HorizontalOptions="Center" Padding="0,30,0,30" FontSize="36"/>
+        <Label Text="Cos poszlo nie tak" FontSize="24" HorizontalOptions="Center" HorizontalTextAlignment="Center" x:Name="LabelPytania" Padding="0,0,0,30"/>
         <Frame BackgroundColor="{StaticResource NiebieskiFerdkowy}" CornerRadius="10" HeightRequest="15" Margin="20,0,20,0" HorizontalOptions="FillAndExpand" />
+        <Label Text="Punkty: 0" x:Name="LabelPunkty"/>
         <StackLayout VerticalOptions="CenterAndExpand">
             <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
-                <Button Text="1" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
-                <Button Text="2" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
+                <Button Clicked="NastepnePytanie" Text="1" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
+                <Button Text="2" x:Name="Button2Odpowiedz" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
                 <Button Text="3" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
