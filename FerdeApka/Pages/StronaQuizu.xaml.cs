@@ -8,9 +8,9 @@ public partial class StronaQuizu : ContentPage
 
     private List<PytaniaIOdpowiedzi> WydobytePytania;
     private Random losowa = new Random();
-    private int iloscPytan = 0;
-    private int ktorePytanie = 1;
-    private int jakiePytanie = 0;
+    private int ktorePytanie = 0;
+    private int poprawnaOdpowiedz = 1;
+    private int punktyGracza = 0;
 
     public StronaQuizu()
     {
@@ -29,8 +29,9 @@ public partial class StronaQuizu : ContentPage
         base.OnDisappearing();
         WydobytePytania = null;
         losowa = null;
-        iloscPytan = default(int);
         ktorePytanie = default(int);
+        poprawnaOdpowiedz = default(int);
+        punktyGracza = default(int);
     }
 
     private async void PobierzJsona(string NazwaQuizu)
@@ -39,10 +40,10 @@ public partial class StronaQuizu : ContentPage
         switch (NazwaQuizu)
         {
             case "Quiz o odcinkach":
-                KtoregoJsona = "PytaniaDoPostaci.json";//dolozyc wiecej quziow
+                KtoregoJsona = "JsonyDoQuizow/PytaniaDoPostaci.json";//dolozyc wiecej quziow
                 break;
             default:
-                KtoregoJsona = "PytaniaDoPostaci.json";
+                KtoregoJsona = "JsonyDoQuizow/PytaniaDoPostaci.json";//zwiekszyc ilosc pytan
                 break;
         }
 
@@ -52,7 +53,7 @@ public partial class StronaQuizu : ContentPage
             using var reader = new StreamReader(stream);
             string fileContent = await reader.ReadToEndAsync();
             WydobytePytania = JsonConvert.DeserializeObject<List<PytaniaIOdpowiedzi>>(fileContent);
-            iloscPytan = WydobytePytania.Count;
+            NastepnePytanie();
         }
         catch (Exception exception)
         {
@@ -60,11 +61,54 @@ public partial class StronaQuizu : ContentPage
         }
     }
 
-    private void NastepnePytanie(object sender, EventArgs e)
+    private void NastepnePytanie()
     {
+        ButtonAnswer1.ClassId = "blad";
+        ButtonAnswer2.ClassId = "blad";
+        ButtonAnswer3.ClassId = "blad";
+        ButtonAnswer4.ClassId = "blad";
+        LabelPunkty.Text = $"Punkty: {punktyGracza}";
         ktorePytanie++;
         LabelKtorePytanie.Text = $"Pytanie {ktorePytanie}";
-        jakiePytanie = losowa.Next(0, iloscPytan);
+        int jakiePytanie = losowa.Next(0, WydobytePytania.Count);
         LabelPytania.Text = WydobytePytania[jakiePytanie].Question;
+        List<string> odpowiedzi = new List<string> { WydobytePytania[jakiePytanie].CorrectAnswer, WydobytePytania[jakiePytanie].Answer2, WydobytePytania[jakiePytanie].Answer3, WydobytePytania[jakiePytanie].Answer4};
+        odpowiedzi = odpowiedzi.OrderBy(_ => losowa.Next()).ToList();
+        ButtonAnswer1.Text = odpowiedzi[0];
+        ButtonAnswer2.Text = odpowiedzi[1];
+        ButtonAnswer3.Text = odpowiedzi[2];
+        ButtonAnswer4.Text = odpowiedzi[3];
+        poprawnaOdpowiedz = 1 + odpowiedzi.FindIndex(x => x == WydobytePytania[jakiePytanie].CorrectAnswer);
+        switch (poprawnaOdpowiedz)
+        {
+            case 1:
+                ButtonAnswer1.ClassId = "PoprawnaOdpowiedz";
+                break;
+            case 2:
+                ButtonAnswer2.ClassId = "PoprawnaOdpowiedz";
+                break;
+            case 3:
+                ButtonAnswer3.ClassId = "PoprawnaOdpowiedz";
+                break;
+            case 4:
+                ButtonAnswer4.ClassId = "PoprawnaOdpowiedz";
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void AnswerClicked(object sender, EventArgs e)
+    {
+        Button WcisnietyGuziol = sender as Button;
+        if (WcisnietyGuziol.ClassId == "PoprawnaOdpowiedz")
+        {
+            punktyGracza++;
+        }
+        else
+        {
+            //przy zlej odpoiwiedzi przycisk zaznaczonej zmieni sie na czerwon a dobrej na zielony
+        }
+        NastepnePytanie(); //stworzyc na stronie wybierania quizow przy przyciskach do rozpoczecia label z maksymalnym wynikiem uzyskanym z quizu
     }
 }

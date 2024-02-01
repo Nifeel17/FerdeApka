@@ -8,17 +8,17 @@
 
     <StackLayout>
         <Label Text="Pytanie 1" x:Name="LabelKtorePytanie" HorizontalOptions="Center" Padding="0,30,0,30" FontSize="36"/>
-        <Label Text="Cos poszlo nie tak" FontSize="24" HorizontalOptions="Center" HorizontalTextAlignment="Center" x:Name="LabelPytania" Padding="0,0,0,30"/>
+        <Label Text="Cos poszlo nie tak" HeightRequest="150" FontSize="24" HorizontalOptions="Center" HorizontalTextAlignment="Center" x:Name="LabelPytania" Padding="0,0,0,30"/>
         <Frame BackgroundColor="{StaticResource NiebieskiFerdkowy}" CornerRadius="10" HeightRequest="15" Margin="20,0,20,0" HorizontalOptions="FillAndExpand" />
-        <Label Text="Punkty: 0" x:Name="LabelPunkty"/>
+        <Label Text="Punkty: 0" HorizontalOptions="Center" FontSize="18" Margin="0,20,0,0" x:Name="LabelPunkty"/>
         <StackLayout VerticalOptions="CenterAndExpand">
             <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
-                <Button Clicked="NastepnePytanie" Text="1" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
-                <Button Text="2" x:Name="Button2Odpowiedz" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
+                <Button ClassId="blad" x:Name="ButtonAnswer1" Clicked="AnswerClicked" Text="1" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
+                <Button ClassId="blad" x:Name="ButtonAnswer2" Clicked="AnswerClicked"  Text="2" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
-                <Button Text="3" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
-                <Button Text="4" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
+                <Button ClassId="blad" x:Name="ButtonAnswer3" Clicked="AnswerClicked" Text="3" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
+                <Button ClassId="blad" x:Name="ButtonAnswer4" Clicked="AnswerClicked" Text="4" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
             </StackLayout>
         </StackLayout>
     </StackLayout>
