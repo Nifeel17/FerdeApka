@@ -11,6 +11,9 @@ public partial class StronaQuizu : ContentPage
     private int ktorePytanie = 0;
     private int poprawnaOdpowiedz = 1;
     private int punktyGracza = 0;
+    private bool czyOdpowiedzial = false;
+    Dictionary<int, Button> Przyciski;
+
 
     public StronaQuizu()
     {
@@ -22,6 +25,13 @@ public partial class StronaQuizu : ContentPage
         PobierzJsona(NazwaQuizu);
         InitializeComponent();
         LabelPytania.Text = NazwaQuizu;
+        Przyciski = new Dictionary<int, Button>()
+        {
+            { 1, ButtonAnswer1 },
+            { 2, ButtonAnswer2 },
+            { 3, ButtonAnswer3 },
+            { 4, ButtonAnswer4 }
+        };
     }
 
     protected override void OnDisappearing()
@@ -63,10 +73,10 @@ public partial class StronaQuizu : ContentPage
 
     private void NastepnePytanie()
     {
-        ButtonAnswer1.ClassId = "blad";
-        ButtonAnswer2.ClassId = "blad";
-        ButtonAnswer3.ClassId = "blad";
-        ButtonAnswer4.ClassId = "blad";
+        foreach(var x in Przyciski)
+        {
+            x.Value.ClassId = "blad";
+        }
         LabelPunkty.Text = $"Punkty: {punktyGracza}";
         ktorePytanie++;
         LabelKtorePytanie.Text = $"Pytanie {ktorePytanie}";
@@ -74,41 +84,38 @@ public partial class StronaQuizu : ContentPage
         LabelPytania.Text = WydobytePytania[jakiePytanie].Question;
         List<string> odpowiedzi = new List<string> { WydobytePytania[jakiePytanie].CorrectAnswer, WydobytePytania[jakiePytanie].Answer2, WydobytePytania[jakiePytanie].Answer3, WydobytePytania[jakiePytanie].Answer4};
         odpowiedzi = odpowiedzi.OrderBy(_ => losowa.Next()).ToList();
-        ButtonAnswer1.Text = odpowiedzi[0];
-        ButtonAnswer2.Text = odpowiedzi[1];
-        ButtonAnswer3.Text = odpowiedzi[2];
-        ButtonAnswer4.Text = odpowiedzi[3];
-        poprawnaOdpowiedz = 1 + odpowiedzi.FindIndex(x => x == WydobytePytania[jakiePytanie].CorrectAnswer);
-        switch (poprawnaOdpowiedz)
+        for(int i=0; i<4; i++)
         {
-            case 1:
-                ButtonAnswer1.ClassId = "PoprawnaOdpowiedz";
-                break;
-            case 2:
-                ButtonAnswer2.ClassId = "PoprawnaOdpowiedz";
-                break;
-            case 3:
-                ButtonAnswer3.ClassId = "PoprawnaOdpowiedz";
-                break;
-            case 4:
-                ButtonAnswer4.ClassId = "PoprawnaOdpowiedz";
-                break;
-            default:
-                break;
+            Przyciski[i + 1].Text = odpowiedzi[i];
         }
+        poprawnaOdpowiedz = 1 + odpowiedzi.FindIndex(x => x == WydobytePytania[jakiePytanie].CorrectAnswer);
+        Przyciski[poprawnaOdpowiedz].ClassId = "PoprawnaOdpowiedz";
     }
 
-    private void AnswerClicked(object sender, EventArgs e)
+    private async void AnswerClicked(object sender, EventArgs e)
     {
+        if (czyOdpowiedzial == true)
+        {
+            return;
+        }
+        czyOdpowiedzial = true;
         Button WcisnietyGuziol = sender as Button;
+        Przyciski[poprawnaOdpowiedz].BackgroundColor = Color.FromArgb("#00cc0e");
         if (WcisnietyGuziol.ClassId == "PoprawnaOdpowiedz")
         {
             punktyGracza++;
+            await Task.Delay(2000);
         }
         else
         {
-            //przy zlej odpoiwiedzi przycisk zaznaczonej zmieni sie na czerwon a dobrej na zielony
+            ((Button)sender).BackgroundColor = Color.FromArgb("#ed2e0c");
+            await Task.Delay(2000);
+            ((Button)sender).BackgroundColor = Color.FromArgb("#FC44FC");
         }
-        NastepnePytanie(); //stworzyc na stronie wybierania quizow przy przyciskach do rozpoczecia label z maksymalnym wynikiem uzyskanym z quizu
+        Przyciski[poprawnaOdpowiedz].BackgroundColor = Color.FromArgb("#FC44FC");
+        await Task.Delay(500);
+        NastepnePytanie();
+        czyOdpowiedzial = false;
+        //stworzyc na stronie wybierania quizow przy przyciskach do rozpoczecia label z maksymalnym wynikiem uzyskanym z quizu
     }
 }
