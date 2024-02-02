@@ -19,22 +19,22 @@
                     <StackLayout>
                 
                         <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
-                            <toolkit:MediaElement x:Name="DzwiekCoWTymSmiesznego" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara//Ferdek//Cowtymsmisznego.mp4" IsVisible="False"/>
-                            <toolkit:MediaElement x:Name="DzwiekFakJu" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara//Ferdek//Fakju.mp4" IsVisible="False"/>
-                            <Button Text="Co w tym smiesznego?" LineBreakMode="WordWrap" Clicked="SoundbarDzwiekCoWTymSmisznegoZagraj" x:Name="SoundbarButtonDzwiekCoWTymSmiesznego" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
-                            <Button Text="Fak ju!" LineBreakMode="WordWrap" Clicked="SoundbarDzwiekFakJuZagraj" x:Name="SoundbarButtonDzwiekFakJu" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
+                            <toolkit:MediaElement x:Name="DzwiekCoWTymSmiesznego" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara/Ferdek/Cowtymsmisznego.mp4" IsVisible="False"/>
+                            <toolkit:MediaElement x:Name="DzwiekFakJu" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara/Ferdek/Fakju.mp4" IsVisible="False"/>
+                            <Button ClassId="CoWTymSmiesznegoID" Text="Co w tym smiesznego?" LineBreakMode="WordWrap" Clicked="ZagrajDzwiek" x:Name="SoundbarButtonDzwiekCoWTymSmiesznego" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
+                            <Button ClassId="FakJuID" Text="Fak ju!" LineBreakMode="WordWrap" Clicked="ZagrajDzwiek" x:Name="SoundbarButtonDzwiekFakJu" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
-                            <toolkit:MediaElement x:Name="DzwiekGoloneczkiBysChcial" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara//Ferdek//Goloneczkibyschcial.mp4" IsVisible="False"/>
-                            <toolkit:MediaElement x:Name="DzwiekJakNieMogeToPrzezNoge" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara//Ferdek//Jakniemogetoprzeznoge.mp4" IsVisible="False"/>
-                            <Button Text="Goloneczki byś chciał?" x:Name="SoundbarButtonDzwiekGoloneczkiBysChcial" Clicked="SoundbarDzwiekCoWTymSmiesznegoZagraj" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" LineBreakMode="WordWrap" Margin="10"/>
-                            <Button Text="Jak nie moge to przez noge" x:Name="SoundbarButtonDzwiekJakNieMogeToPrzezNoge" Clicked="SoundbarDzwiekJakNieMogeToPrzezNogeZagraj" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" LineBreakMode="WordWrap" Margin="10"/>
+                            <toolkit:MediaElement x:Name="DzwiekGoloneczkiBysChcial" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara/Ferdek/Goloneczkibyschcial.mp4" IsVisible="False"/>
+                            <toolkit:MediaElement x:Name="DzwiekJakNieMogeToPrzezNoge" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara/Ferdek/Jakniemogetoprzeznoge.mp4" IsVisible="False"/>
+                            <Button ClassId="GoloneczkaID" Text="Goloneczki byś chciał?" x:Name="SoundbarButtonDzwiekGoloneczkiBysChcial" Clicked="PlayFirstSound" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" LineBreakMode="WordWrap" Margin="10"/>
+                            <Button ClassId="PrzezNogeID" Text="Jak nie moge to przez noge" x:Name="SoundbarButtonDzwiekJakNieMogeToPrzezNoge" Clicked="ZagrajDzwiek" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" LineBreakMode="WordWrap" Margin="10"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
-                            <toolkit:MediaElement x:Name="DzwiekWstydzSie" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara//Ferdek//Wstydzsie.mp4" IsVisible="False"/>
-                            <toolkit:MediaElement x:Name="DzwiekNiePekaj" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara//Ferdek//Niepekaj.mp4" IsVisible="False"/>
-                            <Button Text="Wstydz sie" x:Name="SoundbarButtonDzwiekWstydzSie" Clicked="SoundbarDzwiekWstydzSieZagraj" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10" LineBreakMode="WordWrap"/>
-                            <Button Text="Nie pekaj pan" x:Name="SoundbarButtonDzwiekNiePekaj" Clicked="SoundbarDzwiekNiePekajZagraj" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10" LineBreakMode="WordWrap"/>
+                            <toolkit:MediaElement x:Name="DzwiekWstydzSie" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara/Ferdek/Wstydzsie.mp4" IsVisible="False"/>
+                            <toolkit:MediaElement x:Name="DzwiekNiePekaj" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara/Ferdek/Niepekaj.mp4" IsVisible="False"/>
+                            <Button ClassId="WstydzSieID" Text="Wstydz sie" x:Name="SoundbarButtonDzwiekWstydzSie" Clicked="ZagrajDzwiek" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10" LineBreakMode="WordWrap"/>
+                            <Button ClassId="NiePekajID" Text="Nie pekaj pan" x:Name="SoundbarButtonDzwiekNiePekaj" Clicked="ZagrajDzwiek" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10" LineBreakMode="WordWrap"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
                             <Button Text="Coming soon" BackgroundColor="#fc44fc" WidthRequest="150" Margin="10"/>
