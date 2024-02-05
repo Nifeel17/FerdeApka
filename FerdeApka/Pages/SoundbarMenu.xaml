@@ -27,7 +27,7 @@
                         <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
                             <toolkit:MediaElement x:Name="DzwiekGoloneczkiBysChcial" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara/Ferdek/Goloneczkibyschcial.mp4" IsVisible="False"/>
                             <toolkit:MediaElement x:Name="DzwiekJakNieMogeToPrzezNoge" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara/Ferdek/Jakniemogetoprzeznoge.mp4" IsVisible="False"/>
-                            <Button ClassId="GoloneczkaID" Text="Goloneczki byś chciał?" x:Name="SoundbarButtonDzwiekGoloneczkiBysChcial" Clicked="PlayFirstSound" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" LineBreakMode="WordWrap" Margin="10"/>
+                            <Button ClassId="GoloneczkaID" Text="Goloneczki byś chciał?" x:Name="SoundbarButtonDzwiekGoloneczkiBysChcial" Clicked="ZagrajDzwiek" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" LineBreakMode="WordWrap" Margin="10"/>
                             <Button ClassId="PrzezNogeID" Text="Jak nie moge to przez noge" x:Name="SoundbarButtonDzwiekJakNieMogeToPrzezNoge" Clicked="ZagrajDzwiek" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" LineBreakMode="WordWrap" Margin="10"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">

@@ -12,6 +12,7 @@ public partial class StronaQuizu : ContentPage
     private int poprawnaOdpowiedz = 1;
     private int punktyGracza = 0;
     private bool czyOdpowiedzial = false;
+    string nazwaQuizu="";
     Dictionary<int, Button> Przyciski;
 
 
@@ -24,6 +25,7 @@ public partial class StronaQuizu : ContentPage
     {
         PobierzJsona(NazwaQuizu);
         InitializeComponent();
+        nazwaQuizu = NazwaQuizu;
         LabelPytania.Text = NazwaQuizu;
         Przyciski = new Dictionary<int, Button>()
         {
@@ -42,6 +44,7 @@ public partial class StronaQuizu : ContentPage
         ktorePytanie = default(int);
         poprawnaOdpowiedz = default(int);
         punktyGracza = default(int);
+        nazwaQuizu = null;
     }
 
     private async void PobierzJsona(string NazwaQuizu)
@@ -116,6 +119,11 @@ public partial class StronaQuizu : ContentPage
         await Task.Delay(500);
         NastepnePytanie();
         czyOdpowiedzial = false;
+        if (ktorePytanie > 10)
+        {
+            await Navigation.PushAsync(new PodsumowanieQuizu(nazwaQuizu,punktyGracza));
+        }
+        //stworzyc strone konca quizu po 10 pytaniach
         //stworzyc na stronie wybierania quizow przy przyciskach do rozpoczecia label z maksymalnym wynikiem uzyskanym z quizu
     }
 }

@@ -9,8 +9,9 @@
         <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="5,15,5,15">
             <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Start">
                 <Label Text="Quiz o postaciach" FontSize="18"/>
-                <Label Text="Poziom: trudny" TextColor="Gray" FontSize="15"/>
+                <Label Text="Poziom: łatwy" TextColor="Gray" FontSize="15"/>
             </StackLayout>
+            <Label x:Name="WynikQuizuOPostaciach" Text="0/10" VerticalOptions="Center" FontSize="18" Margin="0,0,10,0"/>
             <Button Text="Rozpocznij" Clicked="PrzejdzDoStronyzQuziemOPostaciach"/>
         </StackLayout>
 
@@ -20,6 +21,7 @@
                 <Label Text="Quiz o odcinkach" FontSize="18"/>
                 <Label Text="Poziom: trudny" TextColor="Gray" FontSize="15"/>
             </StackLayout>
+            <Label x:Name="WynikQuizuOOdcinkach" Text="0/10" VerticalOptions="Center" FontSize="18" Margin="0,0,10,0"/>
             <Button Text="Rozpocznij" Clicked="PrzejdzDoStronyzQuziemOOdcinkach"/>
         </StackLayout>
 

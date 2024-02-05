@@ -7,12 +7,26 @@ public partial class StronaGlowna : ContentPage
 {
 	public StronaGlowna()
 	{
-		InitializeComponent();
-	}
+        InitializeComponent();   
+    }
+
+    public StronaGlowna(string doKad)
+    {
+        InitializeComponent();
+        if (doKad == "StronaWybieraniaQuizow")
+        {
+            PrzejdzmyDoStronyQuizow();
+        }
+    }
+
+    public async void PrzejdzmyDoStronyQuizow()
+    {
+        await Navigation.PushAsync(new StronaWybieraniaQuizow());
+    }
 
     private async void PrzejdzDoStronySoundbarow(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new NavigationPage(new SoundbarMenu()));
+        await Navigation.PushAsync(new SoundbarMenu());
     }
 
     private void PokazPopupOAplikacji(object sender, EventArgs e)

@@ -82,6 +82,9 @@
 	  <MauiXaml Update="Pages\EkranWstepny.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\PodsumowanieQuizu.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\Popuppages\PopupInfoOAplikacji.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
