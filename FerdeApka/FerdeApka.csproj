@@ -63,6 +63,7 @@
 	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Ferdek\Jakniemogetoprzeznoge.mp4" />
 	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Ferdek\Niepekaj.mp4" />
 	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Ferdek\Wstydzsie.mp4" />
+	  <None Remove="Resources\Raw\JsonyDoQuizow\PytaniaDoOdcinkow.json" />
 	  <None Remove="Resources\Raw\PytaniaDoPostaci.json" />
 	</ItemGroup>
 

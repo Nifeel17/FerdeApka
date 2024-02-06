@@ -53,10 +53,13 @@ public partial class StronaQuizu : ContentPage
         switch (NazwaQuizu)
         {
             case "Quiz o odcinkach":
-                KtoregoJsona = "JsonyDoQuizow/PytaniaDoPostaci.json";//dolozyc wiecej quziow
+                KtoregoJsona = "JsonyDoQuizow/PytaniaDoOdcinkow.json";
+                break;
+            case "Quiz o postaciach":
+                KtoregoJsona = "JsonyDoQuizow/PytaniaDoPostaci.json";
                 break;
             default:
-                KtoregoJsona = "JsonyDoQuizow/PytaniaDoPostaci.json";//zwiekszyc ilosc pytan
+                KtoregoJsona = "JsonyDoQuizow/PytaniaDoPostaci.json";
                 break;
         }
 
@@ -123,7 +126,5 @@ public partial class StronaQuizu : ContentPage
         {
             await Navigation.PushAsync(new PodsumowanieQuizu(nazwaQuizu,punktyGracza));
         }
-        //stworzyc strone konca quizu po 10 pytaniach
-        //stworzyc na stronie wybierania quizow przy przyciskach do rozpoczecia label z maksymalnym wynikiem uzyskanym z quizu
     }
 }
