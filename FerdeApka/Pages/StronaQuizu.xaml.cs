@@ -96,6 +96,7 @@ public partial class StronaQuizu : ContentPage
         }
         poprawnaOdpowiedz = 1 + odpowiedzi.FindIndex(x => x == WydobytePytania[jakiePytanie].CorrectAnswer);
         Przyciski[poprawnaOdpowiedz].ClassId = "PoprawnaOdpowiedz";
+        WydobytePytania.RemoveAt(jakiePytanie);
     }
 
     private async void AnswerClicked(object sender, EventArgs e)
