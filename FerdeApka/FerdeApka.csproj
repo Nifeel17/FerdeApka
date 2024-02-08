@@ -101,6 +101,9 @@
 	  <MauiXaml Update="Pages\StronaGlowna.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\StronaMemow.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\StronaQuizu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

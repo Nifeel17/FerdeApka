@@ -47,4 +47,9 @@ public partial class StronaGlowna : ContentPage
     {
         await Navigation.PushAsync(new StronaWybieraniaQuizow());
     }
+
+    private async void PrzejdzDoStronyMemow(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new StronaMemow());
+    }
 }
