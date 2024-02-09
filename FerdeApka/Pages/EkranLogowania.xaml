@@ -18,7 +18,7 @@
             <Button x:Name="button_info_na_ekranie_logowania" Clicked="PopupInfoOLogowaniu" Text="INFO" TextColor="White" BackgroundColor="#737272" FontSize="16" CornerRadius="20" Grid.Column="2" />
         </Grid>
 
-        <Label Text="Ferde apka" FontAttributes="Bold"  HorizontalOptions="Center" FontSize="48" TextColor="Black"/>
+        <Label Text="Ferde apka" FontFamily="FontRegularny" FontAttributes="Bold"  HorizontalOptions="Center" FontSize="48" TextColor="Black"/>
         <Frame BackgroundColor="{StaticResource NiebieskiFerdkowy}" CornerRadius="10" HeightRequest="15" Margin="20,10,20,0" Padding="0" HorizontalOptions="FillAndExpand" />
         <Label Text="Logowanie z kontem" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="10, 10, 10, 0" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
         <Grid Margin="20">

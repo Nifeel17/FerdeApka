@@ -3,13 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FerdeApka.Pages.StronaMemow"
              BackgroundColor="{StaticResource ZoltyFerdkowy}">
-    <ScrollView BackgroundColor="{StaticResource ZoltyFerdkowy}">
-        <StackLayout x:Name="GlownyStackLayout">
-            <Label Text="FerdeMemy" FontAttributes="Bold"  HorizontalOptions="Center" FontSize="48" Margin="0" TextColor="Black"/>
-            <Frame BackgroundColor="{StaticResource NiebieskiFerdkowy}" CornerRadius="10" HeightRequest="15" Margin="20,30,20,10" Padding="0" HorizontalOptions="FillAndExpand" />
-            <Button x:Name="ButtonNastepneMemy" Text="Pokaz więcej" Clicked="NastepneMemy" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 50" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
-
-            <Label Text="Memy się skończyły!" IsVisible="false" x:Name="MemySieSkonczylyLabel" HorizontalOptions="Center" FontSize="24" Margin="0,10,0,30" TextColor="Black"/>
-        </StackLayout>
-    </ScrollView>
+    <StackLayout x:Name="GlownyStackLayout">
+        <Label Text="FerdeMemy" FontFamily="FontRegularny" FontAttributes="Bold"  HorizontalOptions="Center" FontSize="48" Margin="0" TextColor="Black"/>
+        <Frame BackgroundColor="{StaticResource NiebieskiFerdkowy}" CornerRadius="10" HeightRequest="15" Margin="20,30,20,0" Padding="0" HorizontalOptions="FillAndExpand" />
+        <Grid Margin="0,10,0,0">
+            <ActivityIndicator IsVisible="true" IsRunning="true" Margin="0,100,0,0" WidthRequest="50"/>
+            <Image x:Name="ImageMem" Source="nuh uh" Margin="10" MaximumHeightRequest="450"/>
+        </Grid>
+        <Label Text="Memy się skończyły!" IsVisible="false" x:Name="MemySieSkonczylyLabel" HorizontalOptions="Center" FontSize="24" Margin="0,10,0,30" TextColor="Black"/>
+        <Button x:Name="ButtonNastepneMemy" Text="Następny" Clicked="NastepneMemy" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 10, 40, 40" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}" VerticalOptions="EndAndExpand"/>
+    </StackLayout>
 </ContentPage>

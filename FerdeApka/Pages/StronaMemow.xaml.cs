@@ -1,3 +1,7 @@
+using System.ComponentModel;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+
 namespace FerdeApka.Pages;
 
 public partial class StronaMemow : ContentPage
@@ -13,34 +17,21 @@ public partial class StronaMemow : ContentPage
 
     private void NastepneMemy(object sender, EventArgs e)
     {
-        if (KtoreMemyJuzByly.Count() > 46)
+        if (KtoreMemyJuzByly.Count() > 49)
         {
             MemySieSkonczylyLabel.IsVisible = true;
             ButtonNastepneMemy.IsVisible = false;
         }
         else
         {
-            for (int i = 0; i < 3; i++)
+            int numerMema = losowa.Next(1, 51);
+            while(KtoreMemyJuzByly.Contains(numerMema))
             {
-                int numerMema = losowa.Next(1, 51);
-                while(KtoreMemyJuzByly.Contains(numerMema))
-                {
-                    numerMema = losowa.Next(1, 51);
-                }
-                KtoreMemyJuzByly.Add(numerMema);
-                string nazwaMema = "https://raw.githubusercontent.com/ResourcesForMyApp/ResourcesFA/main/FerdeMem" + numerMema.ToString()+".png";
-                int gdziePrzycisk = GlownyStackLayout.Children.IndexOf(ButtonNastepneMemy);
-                if (gdziePrzycisk != -1)
-                {
-                    var noweMeme = new Image
-                    {
-                        Source = nazwaMema,
-                        Margin = new Thickness(10, 30, 10, 20)
-                    };
-
-                    GlownyStackLayout.Children.Insert(gdziePrzycisk, noweMeme);
-                }
+                numerMema = losowa.Next(1, 51);
             }
+            KtoreMemyJuzByly.Add(numerMema);
+            string nazwaMema = "https://raw.githubusercontent.com/ResourcesForMyApp/ResourcesFA/main/FerdeMem" + numerMema.ToString()+".png";
+            ImageMem.Source = ImageSource.FromUri(new Uri(nazwaMema));
         }
     }
 }
