@@ -63,8 +63,8 @@
 	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Ferdek\Jakniemogetoprzeznoge.mp4" />
 	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Ferdek\Niepekaj.mp4" />
 	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Ferdek\Wstydzsie.mp4" />
+	  <None Remove="Resources\Raw\JsonyDoQuizow\CytatyDoDaily.json" />
 	  <None Remove="Resources\Raw\JsonyDoQuizow\PytaniaDoOdcinkow.json" />
-	  <None Remove="Resources\Raw\PytaniaDoPostaci.json" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -95,7 +95,13 @@
 	  <MauiXaml Update="Pages\Popuppages\PopupLogowanieZFacebooka.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\Popuppages\PopupPotrzebnyInternet.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\SoundbarMenu.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\StronaDaily.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\StronaGlowna.xaml">

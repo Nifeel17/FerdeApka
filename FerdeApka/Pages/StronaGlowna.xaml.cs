@@ -50,6 +50,30 @@ public partial class StronaGlowna : ContentPage
 
     private async void PrzejdzDoStronyMemow(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new StronaMemow());
+        NetworkAccess czyJestNet = Connectivity.Current.NetworkAccess;
+
+        if (czyJestNet == NetworkAccess.Internet)
+        {
+            await Navigation.PushAsync(new StronaMemow());
+        }
+        else
+        {
+            this.ShowPopup(new PopupPotrzebnyInternet());
+        }
+        
+    }
+
+    private async void PrzejdzDoStronyDaily(object sender, EventArgs e)
+    {
+        NetworkAccess czyJestNet = Connectivity.Current.NetworkAccess;
+
+        if (czyJestNet == NetworkAccess.Internet)
+        {
+            await Navigation.PushAsync(new StronaDaily());
+        }
+        else
+        {
+            this.ShowPopup(new PopupPotrzebnyInternet());
+        }
     }
 }

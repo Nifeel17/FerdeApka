@@ -12,6 +12,7 @@
             <Button Text="Soundboard" Clicked="PrzejdzDoStronySoundbarow" x:Name="PrzekierowanieDoSoundbaru" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
             <Button Text="Quizy" Clicked="PrzejdzDoStronyQuizow" x:Name="PrzekierowanieDoQuizow" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
             <Button Text="Przeglądaj memy" Clicked="PrzejdzDoStronyMemow" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
+            <Button Text="Daily" Clicked="PrzejdzDoStronyDaily" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
             <Button Text="O aplikacji" Clicked="PokazPopupOAplikacji" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
             <toolkit:MediaElement x:Name="DzwiekNaGlownymEkranie" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara/Ferdek/Fakju.mp4" IsVisible="False"/>
             <ImageButton Source="logoferdek.png" BackgroundColor="{StaticResource ZoltyFerdkowy}" x:Name="PrzyciskLogoFerdkaNacisniety" HeightRequest="250" WidthRequest="250" Margin="0,200,0,20" Clicked="LogoFerdkaKlikniete" VerticalOptions="Center"/>

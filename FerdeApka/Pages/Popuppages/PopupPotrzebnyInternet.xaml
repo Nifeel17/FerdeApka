@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+             x:Class="FerdeApka.Pages.Popuppages.PopupPotrzebnyInternet"
+             CanBeDismissedByTappingOutsideOfPopup="True"
+             Size="350, 250"
+             Color="{StaticResource ZoltyFerdkowy}">
+
+    <StackLayout>
+        <Label Text="Brak połączenia z internetem"
+       VerticalOptions="Center" 
+       HorizontalOptions="Center" 
+       FontAttributes="Bold"
+           Margin="5,10,5,20"
+       FontSize="24"/>
+      
+        <Label Text="Ta funkcja wymaga połączenia z internetem" 
+       VerticalOptions="Center"
+       HorizontalOptions="Center"
+               LineBreakMode="WordWrap"
+               HorizontalTextAlignment="Center"
+       FontSize="18"/>
+        <Button Clicked="Zamknij_Popup_Internet" 
+        Text="Rozumiem!" 
+        TextColor="White" 
+        VerticalOptions="Center"
+        HorizontalOptions="Center" 
+        FontSize="24"  
+        BackgroundColor="{StaticResource RozowyFerdkowy}" 
+        Margin="20" 
+        HeightRequest="70" 
+        CornerRadius="20"/>
+    </StackLayout>
+</mct:Popup>
