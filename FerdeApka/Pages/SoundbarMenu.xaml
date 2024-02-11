@@ -9,7 +9,6 @@
             BarBackgroundColor="{StaticResource ZoltyFerdkowy}"
             SelectedTabColor="{StaticResource NiebieskiFerdkowy}"
             UnselectedTabColor="{StaticResource RozowyFerdkowy}">
-   
             <ContentPage             
                 NavigationPage.HasNavigationBar="False"
                 NavigationPage.BackButtonTitle="" 
@@ -60,12 +59,23 @@
             <ContentPage             
             NavigationPage.HasNavigationBar="False"  
             NavigationPage.BackButtonTitle="" 
-            BackgroundColor="#ffdd33" 
+            BackgroundColor="{StaticResource ZoltyFerdkowy}" 
             Title="Paździoch">
-
-                <Label Text="Soundbary Mariana Paździocha"/>
+                <ScrollView>
+                    <StackLayout>
+                        
+                    </StackLayout>
+                </ScrollView>
+                
             </ContentPage>
 
+    
+    
+    
+    
+    
+    
+    
             <ContentPage             
             NavigationPage.HasNavigationBar="False"  
             NavigationPage.BackButtonTitle="" 
@@ -75,13 +85,30 @@
                 <Label Text="Soundbary Waldusia"/>
             </ContentPage>
 
+    
+    
+    
+    
+    
+    
+    
+    
             <ContentPage             
             NavigationPage.HasNavigationBar="False"  
             NavigationPage.BackButtonTitle="" 
             BackgroundColor="#ffdd33" 
             Title="Babka">
 
-                <Label Text="Soundbary Babki"/>
-            </ContentPage>
+                <ScrollView>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="150" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
+                            <toolkit:MediaElement x:Name="DzwiekKtoZRentOkradl" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara/Babka/Ktozrentokradl.mp4" IsVisible="False"/>
+                            <toolkit:MediaElement x:Name="DzwiekGebeSeZamknij" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara/Babka/Gebesezamknij.mp4" IsVisible="False"/>
+                            <Button ClassId="KtoZRentOkradlID" Text="Kto mnie z rent okradł?" LineBreakMode="WordWrap" Clicked="ZagrajDzwiek" x:Name="SoundbarButtonDzwiekKtoZRentOkradl" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
+                            <Button ClassId="GebeSeZamknijID" Text="Gębe sobie zamknij!" LineBreakMode="WordWrap" Clicked="ZagrajDzwiek" x:Name="SoundbarButtonDzwiekGebeSeZamknij" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="150" Margin="10"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+    </ContentPage>
 
 </TabbedPage>

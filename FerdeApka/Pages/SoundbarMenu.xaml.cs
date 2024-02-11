@@ -19,7 +19,8 @@ public partial class SoundbarMenu : TabbedPage
             { 4, DzwiekJakNieMogeToPrzezNoge },
             { 5, DzwiekWstydzSie },
             { 6, DzwiekNiePekaj },
-
+            { 7, DzwiekKtoZRentOkradl },
+            { 8, DzwiekGebeSeZamknij }
         };
 
         SlownikPrzyciskow = new Dictionary<int, Button>()
@@ -29,7 +30,9 @@ public partial class SoundbarMenu : TabbedPage
             { 3, SoundbarButtonDzwiekGoloneczkiBysChcial },
             { 4, SoundbarButtonDzwiekJakNieMogeToPrzezNoge },
             { 5, SoundbarButtonDzwiekWstydzSie},
-            { 6, SoundbarButtonDzwiekNiePekaj }
+            { 6, SoundbarButtonDzwiekNiePekaj },
+            { 7, SoundbarButtonDzwiekKtoZRentOkradl },
+            { 8, SoundbarButtonDzwiekGebeSeZamknij }
         };
 	}
 

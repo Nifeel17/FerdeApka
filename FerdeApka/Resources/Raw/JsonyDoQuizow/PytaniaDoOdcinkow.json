@@ -11,10 +11,10 @@
 {"ID":11,"Question":"W którym odcinku wystąpił znany piosenkarz Krzysztof Krawczyk?","CorrectAnswer":"Wielki bal","Answer2":"Krawczyk","Answer3":"Bajlando","Answer4":"Operacja Bobas"},
 {"ID":12,"Question":"Który aktor nie pojawił się w żadnym odcinku Świata według Kiepskich?","CorrectAnswer":"Alina Pilaszewska","Answer2":"Lech Dyblik","Answer3":"Krzysztof Dracz","Answer4":"Sławomir Szczęśniak"},
 {"ID":13,"Question":"Ile łącznie powstało odcinków Świata według Kiepskich?","CorrectAnswer":"588","Answer2":"597","Answer3":"612","Answer4":"632"},
-{"ID":14,"Question":"","CorrectAnswer":"","Answer2":"","Answer3":"","Answer4":""},
-{"ID":15,"Question":"","CorrectAnswer":"","Answer2":"","Answer3":"","Answer4":""},
-{"ID":16,"Question":"","CorrectAnswer":"","Answer2":"","Answer3":"","Answer4":""},
-{"ID":17,"Question":"","CorrectAnswer":"","Answer2":"","Answer3":"","Answer4":""},
-{"ID":18,"Question":"","CorrectAnswer":"","Answer2":"","Answer3":"","Answer4":""},
-{"ID":19,"Question":"","CorrectAnswer":"","Answer2":"","Answer3":"","Answer4":""},
-{"ID":20,"Question":"","CorrectAnswer":"","Answer2":"","Answer3":"","Answer4":""}]
+{"ID":14,"Question":"Jakiej firmy jest telewizor Kiepskich?","CorrectAnswer":"Okił","Answer2":"Sony","Answer3":"Khamidow","Answer4":"Sdelano v ZSRR"},
+{"ID":15,"Question":"Kto był pierwszą osobą ukazaną w pierwszym odcinku?","CorrectAnswer":"Rozalia Kiepska","Answer2":"Ferdynand Kiepski","Answer3":"Waldemar Kiepski","Answer4":"Marian Paździoch"},
+{"ID":16,"Question":"Kto nie próbował pobić rekordu Guinnessa?","CorrectAnswer":"Halina Kiepska","Answer2":"Mariola Kiepska","Answer3":"Marian Paździoch","Answer4":"Ferdynand Kiepski"},
+{"ID":17,"Question":"W jednym z odcinków Ferdek chciał zostać...?","CorrectAnswer":"Prezydentem","Answer2":"Premierem","Answer3":"Ministrem sprawiedliwości","Answer4":"Europosłem"},
+{"ID":18,"Question":"W jakim kraju Ferdek znalazł swojego dalekiego krewnego o tym samym nazwisku?","CorrectAnswer":"W Mongolii","Answer2":"W Kazachstanie","Answer3":"W Arabii Saudyjskiej","Answer4":""},
+{"ID":19,"Question":"Ile trwa standardowy odcinek?","CorrectAnswer":"23 minuty","Answer2":"25 minut","Answer3":"18 minut","Answer4":"30 minut"},
+{"ID":20,"Question":"Ile odcinków reżyserował Okił Khamidow?","CorrectAnswer":"282","Answer2":"276","Answer3":"238","Answer4":"269"}]
