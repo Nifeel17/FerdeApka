@@ -76,4 +76,9 @@ public partial class StronaGlowna : ContentPage
             this.ShowPopup(new PopupPotrzebnyInternet());
         }
     }
+
+    private async void PrzejdzDoStronyClicker(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new StronaClicker());
+    }
 }

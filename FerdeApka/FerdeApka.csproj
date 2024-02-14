@@ -57,6 +57,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Lobster-Regular.ttf" />
+	  <None Remove="Resources\Images\clickerimage.png" />
 	  <None Remove="Resources\Images\logoferdek.png" />
 	  <None Remove="Resources\Raw\Cowtymsmisznego.mp4" />
 	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Babka\Gebesezamknij.mp4" />
@@ -101,6 +102,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\SoundbarMenu.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\StronaClicker.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\StronaDaily.xaml">
