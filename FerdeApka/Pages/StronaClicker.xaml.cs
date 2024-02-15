@@ -30,7 +30,6 @@ public partial class StronaClicker : ContentPage
     private async void ClickedClickerButton(object sender, EventArgs e)
     {
         ObliczIlePunktow();
-        punkty++;
         wyswietlPunkty.Text = $"Punkty: {punkty}";
         clickerButton.HeightRequest = clickerButton.HeightRequest - 10;
         await Task.Delay(200);
@@ -41,7 +40,19 @@ public partial class StronaClicker : ContentPage
 
     public void ObliczIlePunktow()
     {
-
+        punkty++;
+        if (punkty % 5 == 0 && wykupioneBonusy[0]=='1')
+        {
+            punkty++;
+        }
+        if (wykupioneBonusy[1]=='1')
+        {
+            Random rnd = new Random();
+            if(rnd.Next(1, 10) == 7)
+            {
+                punkty = punkty + 3;
+            }
+        }
     }
 
     private async void KupionoBonus(object sender, EventArgs e)
@@ -83,6 +94,27 @@ public partial class StronaClicker : ContentPage
             wybrane.BackgroundColor = Color.FromArgb("#e3021c");
             await Task.Delay(1500);
             wybrane.BackgroundColor = Color.FromArgb("#FC44FC");
+        }
+    }
+
+    private async void KupionoFerdePunkty(object sender, EventArgs e)
+    {
+        var x = Preferences.Default.Get("FerdePunkty", 0)+5;
+        if (punkty>=1000)
+        {
+            punkty = punkty - 1000;
+            Preferences.Default.Set("punktyClicker", punkty);
+            Preferences.Default.Set("FerdePunkty", x);
+            wyswietlPunkty.Text = $"Punkty: {punkty}";
+            KupowanieFerdePunktow.BackgroundColor = Color.FromArgb("#00cc0e");
+            await Task.Delay(500);
+            KupowanieFerdePunktow.BackgroundColor = Color.FromArgb("#FC44FC");
+        }
+        else
+        {
+            KupowanieFerdePunktow.BackgroundColor = Color.FromArgb("#e3021c");
+            await Task.Delay(1500);
+            KupowanieFerdePunktow.BackgroundColor = Color.FromArgb("#FC44FC");
         }
     }
 }

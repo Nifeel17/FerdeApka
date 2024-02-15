@@ -7,16 +7,26 @@ public partial class StronaGlowna : ContentPage
 {
 	public StronaGlowna()
 	{
-        InitializeComponent();   
+        InitializeComponent();
+        wyswietlanieFerdePunktow.Text = $"FerdePunkty: {Preferences.Default.Get("FerdePunkty",0)}";
     }
 
     public StronaGlowna(string doKad)
     {
         InitializeComponent();
+        wyswietlanieFerdePunktow.Text = $"FerdePunkty: {Preferences.Default.Get("FerdePunkty", 0)}";
         if (doKad == "StronaWybieraniaQuizow")
         {
             PrzejdzmyDoStronyQuizow();
         }
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+
+        wyswietlanieFerdePunktow.Text = $"FerdePunkty: {Preferences.Default.Get("FerdePunkty", 0)}";
     }
 
     public async void PrzejdzmyDoStronyQuizow()
@@ -80,5 +90,15 @@ public partial class StronaGlowna : ContentPage
     private async void PrzejdzDoStronyClicker(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new StronaClicker());
+    }
+
+    private async void PrzejdzDoStronyKasyno(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new StronaKasyno());
+    }
+
+    private void NacisnietoFerdePunkty(object sender, TappedEventArgs e)
+    {
+        this.ShowPopup(new PopupFerdePunkty());
     }
 }

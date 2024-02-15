@@ -5,12 +5,12 @@
              Title="FerdeClicker"
             BackgroundColor="{StaticResource ZoltyFerdkowy}">
     <StackLayout>
-        <StackLayout HeightRequest="400">
-            <ImageButton x:Name="clickerButton" Clicked="ClickedClickerButton" HorizontalOptions="Center" Source="clickerimage.png" BackgroundColor="{StaticResource ZoltyFerdkowy}" HeightRequest="400"/>
+        <StackLayout HeightRequest="350">
+            <ImageButton x:Name="clickerButton" Clicked="ClickedClickerButton" HorizontalOptions="Center" Source="clickerimage.png" BackgroundColor="{StaticResource ZoltyFerdkowy}" HeightRequest="350"/>
         </StackLayout>
         <Label Text="Punkty:" HorizontalOptions="Center" FontSize="32" Margin="10" x:Name="wyswietlPunkty"/>
         <Frame BackgroundColor="{StaticResource NiebieskiFerdkowy}" CornerRadius="10" HeightRequest="15" Margin="20,20,20,0" Padding="0" HorizontalOptions="FillAndExpand" />
-        <StackLayout Orientation="Horizontal" HeightRequest="100" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
+        <StackLayout Orientation="Horizontal" HeightRequest="100" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
             <StackLayout Orientation="Vertical" Margin="5" WidthRequest="100">
                 <Button x:Name="zakup0" Clicked="KupionoBonus" Text="500" LineBreakMode="WordWrap" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="100"/>
                 <Label Text="Co 5 punktów jeden dodatkowy" Margin="0,5,0,0" HorizontalTextAlignment="Center" HorizontalOptions="Center" LineBreakMode="WordWrap" />
@@ -24,5 +24,7 @@
                 <Label Text="Niespodzianka! Przekonasz się gdy kupisz!" HorizontalTextAlignment="Center" HorizontalOptions="Center" LineBreakMode="WordWrap" />
             </StackLayout>
         </StackLayout>
+        <Button Text="1000" x:Name="KupowanieFerdePunktow" Clicked="KupionoFerdePunkty" BackgroundColor="{StaticResource RozowyFerdkowy}" FontSize="18" WidthRequest="200" HeightRequest="70" VerticalOptions="Start" Margin="0,50,0,0" LineBreakMode="WordWrap"/>
+        <Label Text="5 FerdePunktów" HorizontalOptions="Center" FontSize="24" Margin="5"/>
     </StackLayout>
 </ContentPage>
