@@ -101,4 +101,9 @@ public partial class StronaGlowna : ContentPage
     {
         this.ShowPopup(new PopupFerdePunkty());
     }
+
+    private void DodajFerdePunkty(object sender, EventArgs e)
+    {
+        Preferences.Default.Set("FerdePunkty",Preferences.Default.Get("FerdePunkty",0)+100);
+    }
 }
