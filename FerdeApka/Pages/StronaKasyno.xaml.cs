@@ -1,3 +1,6 @@
+using CommunityToolkit.Maui.Views;
+using FerdeApka.Pages.Popuppages;
+
 namespace FerdeApka.Pages;
 
 public partial class StronaKasyno : ContentPage
@@ -58,7 +61,11 @@ public partial class StronaKasyno : ContentPage
         }
         else if (FortuneWheel.Rotation > 180 || FortuneWheel.Rotation < 90)
         {
-            //moze jakis popup z losowaniem ilosci ferdepunktow
+            int nagroda = losowa.Next(0,6);
+            Preferences.Default.Set("FerdePunkty", Preferences.Default.Get("FerdePunkty", 0) + nagroda);
+            this.ShowPopup(new PopupKasynoNagrody(nagroda));
+            await Task.Delay(5500);
+            wyswietlanieFerdePunktow.Text = $"FerdePunkty: {Preferences.Default.Get("FerdePunkty",0)}";
         }
         czyMoznaKrecic = true;
     }

@@ -99,6 +99,9 @@
 	  <MauiXaml Update="Pages\Popuppages\PopupInformacjaLogowanie.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\Popuppages\PopupKasynoNagrody.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\Popuppages\PopupLogowanieZFacebooka.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
