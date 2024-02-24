@@ -23,6 +23,8 @@
             <Button Text="O aplikacji" Clicked="PokazPopupOAplikacji" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
             <toolkit:MediaElement x:Name="DzwiekNaGlownymEkranie" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara/Ferdek/Fakju.mp4" IsVisible="False"/>
             <Button Text="Dodatkowe ferdepunkty (przycisk dla developera)" Clicked="DodajFerdePunkty"/>
+            <Button Text="Usun ferdepunkty (przycisk dla developera)" Clicked="OdejmijFerdePunkty"/>
+            <Button Text="Zabierz dzwieki (przycisk dla developera)" Clicked="zabierzsuondbary"/>
             <ImageButton Source="logoferdek.png" BackgroundColor="{StaticResource ZoltyFerdkowy}" x:Name="PrzyciskLogoFerdkaNacisniety" HeightRequest="250" WidthRequest="250" Margin="0,200,0,20" Clicked="LogoFerdkaKlikniete" VerticalOptions="Center"/>
         </StackLayout>
     </ScrollView>

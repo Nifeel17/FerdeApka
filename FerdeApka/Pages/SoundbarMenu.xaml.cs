@@ -1,4 +1,5 @@
 using CommunityToolkit.Maui.Views;
+using FerdeApka.Pages.Popuppages;
 
 namespace FerdeApka.Pages;
 
@@ -34,26 +35,50 @@ public partial class SoundbarMenu : TabbedPage
             { 7, SoundbarButtonDzwiekKtoZRentOkradl },
             { 8, SoundbarButtonDzwiekGebeSeZamknij }
         };
+
+        char[] tablicaOdbnlokowanych = Preferences.Default.Get("OdblokowaneSoundbary", "0110000000000000").ToString().ToCharArray();
+
+        for (int i=1; i<SlownikPrzyciskow.Count()+1; i++)
+        {
+            if (tablicaOdbnlokowanych[i]=='0')
+            {
+                SlownikPrzyciskow[i].BackgroundColor = Color.FromArgb("#03BAFC");
+            }
+        }
 	}
 
-    private void ZagrajDzwiek(object sender, EventArgs e)
+    private async void ZagrajDzwiek(object sender, EventArgs e)
     {
         int index = 1;
         foreach(var x in SlownikPrzyciskow)
         {
             if(x.Value.ClassId == ((Button)sender).ClassId)
             {
-                SlownikMediaElement[index].Play();
-                if (SlownikMediaElement[index].CurrentState == CommunityToolkit.Maui.Core.Primitives.MediaElementState.Playing)
+                if (((Button)sender).BackgroundColor.ToHex()=="#03BAFC")
                 {
-                    SlownikMediaElement[index].Stop();
-                    SlownikMediaElement[index].SeekTo(TimeSpan.Zero);
-                    SlownikMediaElement[index].Play();
+                    var czyKupil = await this.ShowPopupAsync(new PopupKupnoDzwieku(index));
+                    if (czyKupil is bool boolWynik)
+                    {
+                        if (boolWynik)
+                        {
+                            ((Button)sender).BackgroundColor = Color.FromArgb("#FC44FC");
+                        }
+                    }
                 }
-                else if (DzwiekFakJu.CurrentState == CommunityToolkit.Maui.Core.Primitives.MediaElementState.Paused || SlownikMediaElement[index].CurrentState == CommunityToolkit.Maui.Core.Primitives.MediaElementState.Stopped)
+                else
                 {
-                    SlownikMediaElement[index].SeekTo(TimeSpan.Zero);
                     SlownikMediaElement[index].Play();
+                    if (SlownikMediaElement[index].CurrentState == CommunityToolkit.Maui.Core.Primitives.MediaElementState.Playing)
+                    {
+                        SlownikMediaElement[index].Stop();
+                        SlownikMediaElement[index].SeekTo(TimeSpan.Zero);
+                        SlownikMediaElement[index].Play();
+                    }
+                    else if (SlownikMediaElement[index].CurrentState == CommunityToolkit.Maui.Core.Primitives.MediaElementState.Paused || SlownikMediaElement[index].CurrentState == CommunityToolkit.Maui.Core.Primitives.MediaElementState.Stopped)
+                    {
+                        SlownikMediaElement[index].SeekTo(TimeSpan.Zero);
+                        SlownikMediaElement[index].Play();
+                    }
                 }
                 break;
             }

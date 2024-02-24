@@ -106,4 +106,15 @@ public partial class StronaGlowna : ContentPage
     {
         Preferences.Default.Set("FerdePunkty",Preferences.Default.Get("FerdePunkty",0)+100);
     }
+
+    private void OdejmijFerdePunkty(object sender, EventArgs e)
+    {
+
+        Preferences.Default.Set("FerdePunkty", 0);
+    }
+
+    private void zabierzsuondbary(object sender, EventArgs e)
+    {
+        Preferences.Default.Set("OdblokowaneSoundbary","00000000000000");
+    }
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+             x:Class="FerdeApka.Pages.Popuppages.PopupKupnoDzwieku"
+              CanBeDismissedByTappingOutsideOfPopup="True"
+            Size="300, 300"
+            Color="{StaticResource ZoltyFerdkowy}">
+
+    <StackLayout>
+        <Label Text="Czy napewno chcesz kupić ten dźwięk?" FontFamily="FontRegularny" FontAttributes="Bold" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontSize="28" Margin="5,5,5,0"  TextColor="Black"/>
+        <Label Text="Tego nie da się odwrócić!"   HorizontalOptions="Center" FontSize="10" Margin="0,0,0,0" TextColor="Black"/>
+        <Button Text="Kup (20)" x:Name="buttonKup" Clicked="Kupujemy" HorizontalOptions="CenterAndExpand" TextColor="white" FontSize="22" CornerRadius="20" Margin="10, 20, 10, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
+        <Button Text="Zamknij" Clicked="Zamknij" HorizontalOptions="CenterAndExpand" TextColor="white" FontSize="22" CornerRadius="20" Margin="10, 10, 10, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
+    </StackLayout>
+</mct:Popup>
