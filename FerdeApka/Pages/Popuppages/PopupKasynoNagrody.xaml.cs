@@ -10,6 +10,13 @@ public partial class PopupKasynoNagrody : Popup
 		LosujNagrode(nagroda);
 	}
 
+    public PopupKasynoNagrody(string wiadomosc)
+    {
+        InitializeComponent();
+        DzwiekNagroda.Text=$"{wiadomosc}";
+        buttonZamknijPopup.IsEnabled = true;
+    }
+
 	public async void LosujNagrode(int nagroda)
 	{
         var losowa = new Random();

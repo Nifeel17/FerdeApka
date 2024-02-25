@@ -36,7 +36,8 @@ public partial class SoundbarMenu : TabbedPage
             { 8, SoundbarButtonDzwiekGebeSeZamknij }
         };
 
-        char[] tablicaOdbnlokowanych = Preferences.Default.Get("OdblokowaneSoundbary", "0110000000000000").ToString().ToCharArray();
+        Preferences.Default.Set("OdblokowaneSoundbary",Preferences.Default.Get("OdblokowaneSoundbary","011000000"));
+        char[] tablicaOdbnlokowanych = Preferences.Default.Get("OdblokowaneSoundbary", "011000000").ToString().ToCharArray();
 
         for (int i=1; i<SlownikPrzyciskow.Count()+1; i++)
         {

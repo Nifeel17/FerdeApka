@@ -18,7 +18,7 @@ public partial class PopupKupnoDzwieku : Popup
         if (Preferences.Default.Get("FerdePunkty", 0) >= 20)
         {
             Preferences.Default.Set("FerdePunkty", Preferences.Default.Get("FerdePunkty", 0) - 20);
-            char[] odblokowane = Preferences.Default.Get("OdblokowaneSoundbary", "00000000000000000").ToCharArray();
+            char[] odblokowane = Preferences.Default.Get("OdblokowaneSoundbary", "011000000").ToCharArray();
             odblokowane[indexG] = '1';
             Preferences.Default.Set("OdblokowaneSoundbary", new string(odblokowane));
             await CloseAsync(true);
