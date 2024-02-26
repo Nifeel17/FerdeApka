@@ -27,6 +27,11 @@ public partial class StronaKasyno : ContentPage
         }
         if (Preferences.Default.Get("FerdePunkty", 0)<15)
         {
+            czyMoznaKrecic = false;
+            krecenieKolem.BackgroundColor = Color.FromArgb("#ed2e0c");
+            await Task.Delay(2000);
+            krecenieKolem.BackgroundColor = Color.FromArgb("#FC44FC");
+            czyMoznaKrecic = true;
             return;
         }
         Preferences.Default.Set("FerdePunkty",Preferences.Default.Get("FerdePunkty",15)-15);

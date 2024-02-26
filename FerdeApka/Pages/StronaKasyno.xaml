@@ -7,7 +7,8 @@
     <StackLayout>
         <Label Text="FerdePunkty: 0" x:Name="wyswietlanieFerdePunktow" FontSize="20" Margin="0,5,40,0" HorizontalOptions="End"/>
         <Label Text="Kasyno" FontFamily="FontRegularny" FontAttributes="Bold"  HorizontalOptions="Center" FontSize="56" Margin="0,0,0,0" TextColor="Black"/>
+        <Image HorizontalOptions="Center" HeightRequest="50" Source="strzalka.png"/>
         <Image x:Name="FortuneWheel" Source="fortunewheel.png" HorizontalOptions="Center" HeightRequest="300"/>
-        <Button Text="Zakręć (15)" Clicked="ZakrecFotuneWheel" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
+        <Button Text="Zakręć (15)" Clicked="ZakrecFotuneWheel" x:Name="krecenieKolem" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
     </StackLayout>
 </ContentPage>
