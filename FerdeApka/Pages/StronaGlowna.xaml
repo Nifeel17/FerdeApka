@@ -25,6 +25,26 @@
             <Button Text="Dodatkowe ferdepunkty (przycisk dla developera)" Clicked="DodajFerdePunkty"/>
             <Button Text="Usun ferdepunkty (przycisk dla developera)" Clicked="OdejmijFerdePunkty"/>
             <Button Text="Zabierz dzwieki (przycisk dla developera)" Clicked="zabierzsuondbary"/>
+
+            <CarouselView x:Name="karuz">
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="20" />
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame>
+                                <StackLayout>
+                                    <ImageButton Clicked="PrzejdzDoStrony" CommandParameter="{Binding .}" Source="{Binding Obrazek}" HeightRequest="200"/>
+                                    <Label Text="{Binding Nazwa}"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+
             <ImageButton Source="logoferdek.png" BackgroundColor="{StaticResource ZoltyFerdkowy}" x:Name="PrzyciskLogoFerdkaNacisniety" HeightRequest="250" WidthRequest="250" Margin="0,200,0,20" Clicked="LogoFerdkaKlikniete" VerticalOptions="Center"/>
         </StackLayout>
     </ScrollView>

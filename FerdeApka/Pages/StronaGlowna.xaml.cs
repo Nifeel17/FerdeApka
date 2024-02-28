@@ -1,14 +1,24 @@
+using System.Collections.ObjectModel;
 using CommunityToolkit.Maui.Views;
+using FerdeApka.Classes;
 using FerdeApka.Pages.Popuppages;
 
 namespace FerdeApka.Pages;
 
 public partial class StronaGlowna : ContentPage
 {
-	public StronaGlowna()
+
+    public StronaGlowna()
 	{
         InitializeComponent();
         wyswietlanieFerdePunktow.Text = $"FerdePunkty: {Preferences.Default.Get("FerdePunkty",0)}";
+        List<ModelKaruzela> Karuzelka = new List<ModelKaruzela>()
+        {
+            new ModelKaruzela() { Nazwa="Soundbar", Opis="Najlepsze dŸwiêki z serialu!", KtoraStrona="SoundbarMenu", Obrazek="logoferdek.png"},
+            new ModelKaruzela() { Nazwa="Quizy", Opis="Czy odpowiesz poprrawnie na wszystkie?", KtoraStrona="StronaQuizu", Obrazek="dotnet_bot.png"},
+            new ModelKaruzela() { Nazwa="Przegladaj memy", Opis="Dobre meme, powa¿nie!", KtoraStrona="StronaMemow", Obrazek="strzalka.png"}//zmienic ilustracje
+        };
+        karuz.ItemsSource=Karuzelka;
     }
 
     public StronaGlowna(string doKad)
@@ -116,5 +126,15 @@ public partial class StronaGlowna : ContentPage
     private void zabierzsuondbary(object sender, EventArgs e)
     {
         Preferences.Default.Set("OdblokowaneSoundbary","00000000000000");
+    }
+
+    private void PrzejdzDoStrony(object sender, EventArgs e)
+    {
+        var g = sender as ModelKaruzela;//problem z ta linia
+        DisplayAlert("s", "d", "OK");
+        if (g != null)
+        {
+            DisplayAlert($"{g.Nazwa}", $"{g.Opis}", "OK");
+        }
     }
 }
