@@ -60,6 +60,7 @@
 	  <None Remove="Resources\Images\clickerimage.png" />
 	  <None Remove="Resources\Images\fortunewheel.png" />
 	  <None Remove="Resources\Images\logoferdek.png" />
+	  <None Remove="Resources\Images\marianpazdzioch.png" />
 	  <None Remove="Resources\Images\strzalka.png" />
 	  <None Remove="Resources\Raw\Cowtymsmisznego.mp4" />
 	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Babka\Gebesezamknij.mp4" />

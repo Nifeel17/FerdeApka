@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 using CommunityToolkit.Maui.Views;
 using FerdeApka.Classes;
 using FerdeApka.Pages.Popuppages;
@@ -14,9 +15,12 @@ public partial class StronaGlowna : ContentPage
         wyswietlanieFerdePunktow.Text = $"FerdePunkty: {Preferences.Default.Get("FerdePunkty",0)}";
         List<ModelKaruzela> Karuzelka = new List<ModelKaruzela>()
         {
-            new ModelKaruzela() { Nazwa="Soundbar", Opis="Najlepsze dŸwiêki z serialu!", KtoraStrona="SoundbarMenu", Obrazek="logoferdek.png"},
-            new ModelKaruzela() { Nazwa="Quizy", Opis="Czy odpowiesz poprrawnie na wszystkie?", KtoraStrona="StronaQuizu", Obrazek="dotnet_bot.png"},
-            new ModelKaruzela() { Nazwa="Przegladaj memy", Opis="Dobre meme, powa¿nie!", KtoraStrona="StronaMemow", Obrazek="strzalka.png"}//zmienic ilustracje
+            new ModelKaruzela() { Nazwa="Soundbar", Opis="Najlepsze dŸwiêki z serialu!", Strona=new SoundbarMenu(), Obrazek="marianpazdzioch.png"},
+            new ModelKaruzela() { Nazwa="Quizy", Opis="Czy odpowiesz poprrawnie na wszystkie?", Strona=new StronaWybieraniaQuizow(), Obrazek="dotnet_bot.png"},
+            new ModelKaruzela() { Nazwa="Przegladaj memy", Opis="Dobre meme, powa¿nie!", Strona=new StronaMemow(), Obrazek="strzalka.png"},
+            new ModelKaruzela() { Nazwa="Clicker", Opis="Poklikaj sobie", Strona=new StronaClicker(), Obrazek="logoferdek.png"},
+            new ModelKaruzela() { Nazwa="Kasyno", Opis="Przewal ca³y swój maj¹tek (FerdePunktów) ju¿ dzisiaj!", Strona=new StronaKasyno(), Obrazek="strzalka.png"},
+            new ModelKaruzela() { Nazwa="Daily", Opis="Dzienny cytat i mem", Strona=new StronaDaily(), Obrazek="strzalka.png"}
         };
         karuz.ItemsSource=Karuzelka;
     }
@@ -128,13 +132,14 @@ public partial class StronaGlowna : ContentPage
         Preferences.Default.Set("OdblokowaneSoundbary","00000000000000");
     }
 
-    private void PrzejdzDoStrony(object sender, EventArgs e)
+    private async void KliknietaKaruzela(object sender, TappedEventArgs e)
     {
-        var g = sender as ModelKaruzela;//problem z ta linia
-        DisplayAlert("s", "d", "OK");
-        if (g != null)
+        var item = e.Parameter as ModelKaruzela;
+        if (item != null)
         {
-            DisplayAlert($"{g.Nazwa}", $"{g.Opis}", "OK");
+            await Navigation.PushAsync(item.Strona);
         }
     }
+
+
 }

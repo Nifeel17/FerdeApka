@@ -10,7 +10,7 @@ namespace FerdeApka.Classes
     {
         public string Nazwa {  get; set; }
         public string Opis { get; set; }
-        public string KtoraStrona { get; set; }
+        public Page Strona { get; set; }
         public string Obrazek { get; set; }
 
     }

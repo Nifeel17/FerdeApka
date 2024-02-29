@@ -32,14 +32,15 @@
                 </CarouselView.ItemsLayout>
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout>
-                            <Frame>
-                                <StackLayout>
-                                    <ImageButton Clicked="PrzejdzDoStrony" CommandParameter="{Binding .}" Source="{Binding Obrazek}" HeightRequest="200"/>
-                                    <Label Text="{Binding Nazwa}"/>
-                                </StackLayout>
-                            </Frame>
-                        </StackLayout>
+                        <Frame Margin="0" Padding="0">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="KliknietaKaruzela" CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
+                            <Grid Margin="0" Padding="0">
+                                <Image Source="{Binding Obrazek}" Aspect="AspectFill" HeightRequest="280"/>
+                                <Label Text="{Binding Nazwa}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontSize="36" FontAttributes="Bold" FontFamily="FontRegularny" />
+                            </Grid>
+                        </Frame>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
