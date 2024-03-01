@@ -5,48 +5,41 @@
              x:Class="FerdeApka.Pages.StronaGlowna"
              NavigationPage.HasNavigationBar="False"  
              NavigationPage.BackButtonTitle="">
-    <ScrollView>
         <StackLayout BackgroundColor="{StaticResource ZoltyFerdkowy}">
-            <Label Text="FerdePunkty: 0" x:Name="wyswietlanieFerdePunktow" FontSize="20" Margin="0,5,40,0" HorizontalOptions="End">
+            <Label Text="FerdePunkty: 0" x:Name="wyswietlanieFerdePunktow" FontSize="20" Margin="0,5,40,0" TextColor="{StaticResource RozowyFerdkowy}" HorizontalOptions="End">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="NacisnietoFerdePunkty" NumberOfTapsRequired="1" />
                 </Label.GestureRecognizers>
             </Label>
-            <Label Text="Ferde apka" FontFamily="FontRegularny" FontAttributes="Bold"  HorizontalOptions="Center" FontSize="56" Margin="0,0,0,0" TextColor="Black"/>
+            <Label Text="Ferde apka" FontFamily="FontRegularny" FontAttributes="Bold"  HorizontalOptions="Center" FontSize="64" Margin="0,0,0,0" TextColor="Black"/>
             <Frame BackgroundColor="{StaticResource NiebieskiFerdkowy}" CornerRadius="10" HeightRequest="15" Margin="20,20,20,0" Padding="0" HorizontalOptions="FillAndExpand" />
-            <Button Text="Soundboard" Clicked="PrzejdzDoStronySoundbarow" x:Name="PrzekierowanieDoSoundbaru" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
-            <Button Text="Quizy" Clicked="PrzejdzDoStronyQuizow" x:Name="PrzekierowanieDoQuizow" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
-            <Button Text="Przeglądaj memy" Clicked="PrzejdzDoStronyMemow" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
-            <Button Text="Clicker" Clicked="PrzejdzDoStronyClicker" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
-            <Button Text="Kasyno" Clicked="PrzejdzDoStronyKasyno" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
-            <Button Text="Daily" Clicked="PrzejdzDoStronyDaily" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
-            <Button Text="O aplikacji" Clicked="PokazPopupOAplikacji" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
-            <toolkit:MediaElement x:Name="DzwiekNaGlownymEkranie" WidthRequest="400" HeightRequest="300" Source="embed://DzwiekiDoSoundbara/Ferdek/Fakju.mp4" IsVisible="False"/>
-            <Button Text="Dodatkowe ferdepunkty (przycisk dla developera)" Clicked="DodajFerdePunkty"/>
-            <Button Text="Usun ferdepunkty (przycisk dla developera)" Clicked="OdejmijFerdePunkty"/>
-            <Button Text="Zabierz dzwieki (przycisk dla developera)" Clicked="zabierzsuondbary"/>
 
-            <CarouselView x:Name="karuz">
+
+            <CarouselView x:Name="karuzela" IndicatorView="indicatorKaruzeli" Margin="0,40,0,0">
                 <CarouselView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="20" />
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="20" SnapPointsAlignment="Center" SnapPointsType="MandatorySingle"/>
                 </CarouselView.ItemsLayout>
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Margin="0" Padding="0">
+                        <Frame Margin="0"  Padding="0">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="KliknietaKaruzela" CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
                             </Frame.GestureRecognizers>
                             <Grid Margin="0" Padding="0">
-                                <Image Source="{Binding Obrazek}" Aspect="AspectFill" HeightRequest="280"/>
-                                <Label Text="{Binding Nazwa}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontSize="36" FontAttributes="Bold" FontFamily="FontRegularny" />
+                                <Image Source="{Binding Obrazek}" Aspect="AspectFill" HeightRequest="380" />
+                                <Label Text="{Binding Nazwa}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="{StaticResource RozowyFerdkowy}" FontSize="40" FontAttributes="Bold" FontFamily="FontRegularny" />
+                                <Label Text="{Binding Opis}" HorizontalOptions="Start" VerticalOptions="End" BackgroundColor="Transparent" TextColor="{StaticResource RozowyFerdkowy}" FontSize="22" LineBreakMode="WordWrap" Margin="5,0,5,0" FontAttributes="Bold" FontFamily="FontRegularny" />
                             </Grid>
                         </Frame>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
 
+            <IndicatorView x:Name="indicatorKaruzeli" HorizontalOptions="Center" IndicatorColor="{StaticResource NiebieskiFerdkowy}" IndicatorSize="8" SelectedIndicatorColor="{StaticResource RozowyFerdkowy}" Margin="0,20,0,0"></IndicatorView>
+            
+            <Button Text="Dodatkowe ferdepunkty (przycisk dla developera)" Clicked="DodajFerdePunkty" Margin="0,40,0,0"/>
+            <Button Text="Usun ferdepunkty (przycisk dla developera)" Clicked="OdejmijFerdePunkty"/>
+            <Button Text="Zabierz dzwieki (przycisk dla developera)" Clicked="zabierzsuondbary"/>
 
-            <ImageButton Source="logoferdek.png" BackgroundColor="{StaticResource ZoltyFerdkowy}" x:Name="PrzyciskLogoFerdkaNacisniety" HeightRequest="250" WidthRequest="250" Margin="0,200,0,20" Clicked="LogoFerdkaKlikniete" VerticalOptions="Center"/>
         </StackLayout>
-    </ScrollView>
 </ContentPage>
