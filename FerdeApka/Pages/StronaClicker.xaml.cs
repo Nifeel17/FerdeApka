@@ -69,15 +69,15 @@ public partial class StronaClicker : ContentPage
             Preferences.Default.Set("punktyClicker", punkty);
             switch (wybrane.Text)
             {
-                case "500":
+                case "2000":
                     wykupioneBonusy[0] = '1';
                     Preferences.Default.Set("wykupionebonusy", new string(wykupioneBonusy));
                     break;
-                case "700":
+                case "4000":
                     wykupioneBonusy[1] = '1';
                     Preferences.Default.Set("wykupionebonusy", new string(wykupioneBonusy));
                     break;
-                case "20000":
+                case "10000":
                     wykupioneBonusy[2] = '1';
                     Preferences.Default.Set("wykupionebonusy", new string(wykupioneBonusy));
                     break;

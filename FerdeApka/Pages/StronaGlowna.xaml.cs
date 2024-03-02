@@ -16,7 +16,7 @@ public partial class StronaGlowna : ContentPage
         List<ModelKaruzela> Karuzelka = new List<ModelKaruzela>()
         {
             new ModelKaruzela() { Nazwa="Soundbar", Opis="Najlepsze dŸwiêki z serialu!", Strona=new SoundbarMenu(), Obrazek="ferdekmuzyk.png"},
-            new ModelKaruzela() { Nazwa="Quizy", Opis="Czy odpowiesz poprrawnie na wszystkie?", Strona=new StronaWybieraniaQuizow(), Obrazek="ferdekrece.png"},
+            new ModelKaruzela() { Nazwa="Quizy", Opis="Czy odpowiesz poprrawnie na wszystkie pytania?", Strona=new StronaWybieraniaQuizow(), Obrazek="ferdekrece.png"},
             new ModelKaruzela() { Nazwa="Przegladaj memy", Opis="Dobre meme, powa¿nie!", Strona=new StronaMemow(), Obrazek="ferdeklampa.png"},
             new ModelKaruzela() { Nazwa="Clicker", Opis="Poklikaj sobie", Strona=new StronaClicker(), Obrazek="ferdekpiwko.png"},
             new ModelKaruzela() { Nazwa="Kasyno", Opis="Przewal ca³y swój maj¹tek (FerdePunktów) ju¿ dzisiaj!", Strona=new StronaKasyno(), Obrazek="ferdekkasyno.png"},
@@ -54,58 +54,11 @@ public partial class StronaGlowna : ContentPage
         this.ShowPopup(new PopupInfoOAplikacji());
     }
 
-  
-
-    private async void PrzejdzDoStronyMemow(object sender, EventArgs e)
-    {
-        NetworkAccess czyJestNet = Connectivity.Current.NetworkAccess;
-
-        if (czyJestNet == NetworkAccess.Internet)
-        {
-            await Navigation.PushAsync(new StronaMemow());
-        }
-        else
-        {
-            this.ShowPopup(new PopupPotrzebnyInternet());
-        }
-        
-    }
-
-    private async void PrzejdzDoStronyDaily(object sender, EventArgs e)
-    {
-        NetworkAccess czyJestNet = Connectivity.Current.NetworkAccess;
-
-        if (czyJestNet == NetworkAccess.Internet)
-        {
-            await Navigation.PushAsync(new StronaDaily());
-        }
-        else
-        {
-            this.ShowPopup(new PopupPotrzebnyInternet());
-        }
-    }
-
     private void NacisnietoFerdePunkty(object sender, TappedEventArgs e)
     {
         this.ShowPopup(new PopupFerdePunkty());
     }
-    //potem moge wywalic
-    private void DodajFerdePunkty(object sender, EventArgs e)
-    {
-        Preferences.Default.Set("FerdePunkty",Preferences.Default.Get("FerdePunkty",0)+100);
-    }
-
-    private void OdejmijFerdePunkty(object sender, EventArgs e)
-    {
-
-        Preferences.Default.Set("FerdePunkty", 0);
-    }
-
-    private void zabierzsuondbary(object sender, EventArgs e)
-    {
-        Preferences.Default.Set("OdblokowaneSoundbary","00000000000000");
-    }
-    //az tutaj
+   
     private async void KliknietaKaruzela(object sender, TappedEventArgs e)
     {
         var item = e.Parameter as ModelKaruzela;

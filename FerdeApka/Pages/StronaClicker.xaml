@@ -12,15 +12,15 @@
         <Frame BackgroundColor="{StaticResource NiebieskiFerdkowy}" CornerRadius="10" HeightRequest="15" Margin="20,20,20,0" Padding="0" HorizontalOptions="FillAndExpand" />
         <StackLayout Orientation="Horizontal" HeightRequest="100" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
             <StackLayout Orientation="Vertical" Margin="5" WidthRequest="100">
-                <Button x:Name="zakup0" Clicked="KupionoBonus" Text="500" LineBreakMode="WordWrap" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="100"/>
+                <Button x:Name="zakup0" Clicked="KupionoBonus" Text="2000" LineBreakMode="WordWrap" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="100"/>
                 <Label Text="Co 5 punktów jeden dodatkowy" Margin="0,5,0,0" HorizontalTextAlignment="Center" HorizontalOptions="Center" LineBreakMode="WordWrap" />
             </StackLayout>
             <StackLayout Orientation="Vertical" Margin="5" WidthRequest="100">
-                <Button x:Name="zakup1" Text="700" Clicked="KupionoBonus" LineBreakMode="WordWrap" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="100"/>
+                <Button x:Name="zakup1" Text="4000" Clicked="KupionoBonus" LineBreakMode="WordWrap" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="100"/>
                 <Label Text="Szansa na uzyskanie dodatkowych 3 punktów" HorizontalTextAlignment="Center" HorizontalOptions="Center" LineBreakMode="WordWrap" />
             </StackLayout>
             <StackLayout Orientation="Vertical" Margin="5" WidthRequest="100">
-                <Button x:Name="zakup2" Text="20000" Clicked="KupionoBonus" LineBreakMode="WordWrap" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="100"/>
+                <Button x:Name="zakup2" Text="10000" Clicked="KupionoBonus" LineBreakMode="WordWrap" BackgroundColor="{StaticResource RozowyFerdkowy}" WidthRequest="100"/>
                 <Label Text="Niespodzianka! Przekonasz się gdy kupisz!" HorizontalTextAlignment="Center" HorizontalOptions="Center" LineBreakMode="WordWrap" />
             </StackLayout>
         </StackLayout>

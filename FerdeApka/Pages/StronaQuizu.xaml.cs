@@ -58,6 +58,9 @@ public partial class StronaQuizu : ContentPage
             case "Quiz o postaciach":
                 KtoregoJsona = "JsonyDoQuizow/PytaniaDoPostaci.json";
                 break;
+            case "Quiz o tworzeniu serialu":
+                KtoregoJsona = "JsonyDoQuizow/PytaniaDoTworzeniaSerialu.json";
+                break;
             default:
                 KtoregoJsona = "JsonyDoQuizow/PytaniaDoPostaci.json";
                 break;

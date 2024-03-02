@@ -25,5 +25,16 @@
             <Button Text="Rozpocznij" Clicked="PrzejdzDoStronyzQuziemOOdcinkach"/>
         </StackLayout>
 
+
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="5,15,5,15">
+            <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Start">
+                <Label Text="Quiz o tworzeniu serialu" FontSize="18"/>
+                <Label Text="Poziom: CHOLERNIE TRUDNY" TextColor="Gray" FontSize="15"/>
+            </StackLayout>
+            <Label x:Name="WynikQuizuOTworzeniuSerialu" Text="0/10" VerticalOptions="Center" FontSize="18" Margin="0,0,10,0"/>
+            <Button Text="Rozpocznij" Clicked="PrzejdzDoStronyzQuziemOTworzeniuSerialu"/>
+        </StackLayout>
+
     </StackLayout>
 </ContentPage>

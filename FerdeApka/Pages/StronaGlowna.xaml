@@ -6,11 +6,13 @@
              NavigationPage.HasNavigationBar="False"  
              NavigationPage.BackButtonTitle="">
         <StackLayout BackgroundColor="{StaticResource ZoltyFerdkowy}">
+            
             <Label Text="FerdePunkty: 0" x:Name="wyswietlanieFerdePunktow" FontSize="20" Margin="0,5,40,0" TextColor="{StaticResource RozowyFerdkowy}" HorizontalOptions="End">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="NacisnietoFerdePunkty" NumberOfTapsRequired="1" />
                 </Label.GestureRecognizers>
             </Label>
+            
             <Label Text="Ferde apka" FontFamily="FontRegularny" FontAttributes="Bold"  HorizontalOptions="Center" FontSize="64" Margin="0,0,0,0" TextColor="Black"/>
             <Frame BackgroundColor="{StaticResource NiebieskiFerdkowy}" CornerRadius="10" HeightRequest="15" Margin="20,20,20,0" Padding="0" HorizontalOptions="FillAndExpand" />
 
@@ -36,10 +38,8 @@
             </CarouselView>
 
             <IndicatorView x:Name="indicatorKaruzeli" HorizontalOptions="Center" IndicatorColor="{StaticResource NiebieskiFerdkowy}" IndicatorSize="8" SelectedIndicatorColor="{StaticResource RozowyFerdkowy}" Margin="0,20,0,0"></IndicatorView>
-            
-            <Button Text="Dodatkowe ferdepunkty (przycisk dla developera)" Clicked="DodajFerdePunkty" Margin="0,40,0,0"/>
-            <Button Text="Usun ferdepunkty (przycisk dla developera)" Clicked="OdejmijFerdePunkty"/>
-            <Button Text="Zabierz dzwieki (przycisk dla developera)" Clicked="zabierzsuondbary"/>
+
+            <Button Text="O aplikacji" Clicked="PokazPopupOAplikacji" TextColor="white" FontSize="22" CornerRadius="20" Margin="40, 50, 40, 0" HeightRequest="70" BackgroundColor="{StaticResource RozowyFerdkowy}"/>
 
         </StackLayout>
 </ContentPage>

@@ -76,6 +76,7 @@
 	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Ferdek\Wstydzsie.mp4" />
 	  <None Remove="Resources\Raw\JsonyDoQuizow\CytatyDoDaily.json" />
 	  <None Remove="Resources\Raw\JsonyDoQuizow\PytaniaDoOdcinkow.json" />
+	  <None Remove="Resources\Raw\JsonyDoQuizow\PytaniaDoTworzeniaSerialu.json" />
 	</ItemGroup>
 
 	<ItemGroup>
