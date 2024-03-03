@@ -12,7 +12,7 @@
                 <Label Text="Poziom: łatwy" TextColor="Gray" FontSize="15"/>
             </StackLayout>
             <Label x:Name="WynikQuizuOPostaciach" Text="0/10" VerticalOptions="Center" FontSize="18" Margin="0,0,10,0"/>
-            <Button Text="Rozpocznij" Clicked="PrzejdzDoStronyzQuziemOPostaciach"/>
+            <Button Text="Rozpocznij" CommandParameter="Quiz o odcinkach" Clicked="PrzejdzDoStronyzQuziem"/>
         </StackLayout>
 
 
@@ -22,7 +22,7 @@
                 <Label Text="Poziom: trudny" TextColor="Gray" FontSize="15"/>
             </StackLayout>
             <Label x:Name="WynikQuizuOOdcinkach" Text="0/10" VerticalOptions="Center" FontSize="18" Margin="0,0,10,0"/>
-            <Button Text="Rozpocznij" Clicked="PrzejdzDoStronyzQuziemOOdcinkach"/>
+            <Button Text="Rozpocznij" CommandParameter="Quiz o postaciach" Clicked="PrzejdzDoStronyzQuziem"/>
         </StackLayout>
 
 
@@ -33,8 +33,8 @@
                 <Label Text="Poziom: CHOLERNIE TRUDNY" TextColor="Gray" FontSize="15"/>
             </StackLayout>
             <Label x:Name="WynikQuizuOTworzeniuSerialu" Text="0/10" VerticalOptions="Center" FontSize="18" Margin="0,0,10,0"/>
-            <Button Text="Rozpocznij" Clicked="PrzejdzDoStronyzQuziemOTworzeniuSerialu"/>
+            <Button Text="Rozpocznij" CommandParameter="Quiz o tworzeniu serialu" Clicked="PrzejdzDoStronyzQuziem"/>
         </StackLayout>
-
+        
     </StackLayout>
 </ContentPage>

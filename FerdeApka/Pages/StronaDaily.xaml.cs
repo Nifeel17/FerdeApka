@@ -40,6 +40,7 @@ public partial class StronaDaily : ContentPage
             numerMemaDnia = losowa.Next(1, 49);
             Preferences.Default.Set("CytatDnia", numerCytatDnia);
             Preferences.Default.Set("MemDnia", numerMemaDnia);
+            Preferences.Default.Set("FerdePunkty",Preferences.Default.Get("FerdePunkty",0)+5);
         }
         LabelCytatDnia.Text = WydobyteCytaty[numerCytatDnia].Cytat;
         MemDnia.Source = "https://raw.githubusercontent.com/ResourcesForMyApp/ResourcesFA/main/FerdeMem" + numerMemaDnia + ".png";
