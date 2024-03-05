@@ -9,6 +9,7 @@ public partial class EkranLogowania : ContentPage
 	public EkranLogowania()
 	{
 		InitializeComponent();
+        Preferences.Default.Set("FerdePunkty",50);//tymczasowe, do usuniecia
 	}
 
     private async void PowrotDoWstepu(object sender, EventArgs e)

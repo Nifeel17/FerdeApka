@@ -72,7 +72,9 @@
 	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Babka\Ktozrentokradl.mp4" />
 	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Ferdek\Goloneczkibyschcial.mp4" />
 	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Ferdek\Jakniemogetoprzeznoge.mp4" />
+	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Ferdek\NieInteresujSie.mp4" />
 	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Ferdek\Niepekaj.mp4" />
+	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Ferdek\ObiecankaPiosenka.mp4" />
 	  <None Remove="Resources\Raw\DzwiekiDoSoundbara\Ferdek\Wstydzsie.mp4" />
 	  <None Remove="Resources\Raw\JsonyDoQuizow\CytatyDoDaily.json" />
 	  <None Remove="Resources\Raw\JsonyDoQuizow\PytaniaDoOdcinkow.json" />

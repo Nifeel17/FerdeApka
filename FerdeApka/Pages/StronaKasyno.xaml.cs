@@ -63,7 +63,7 @@ public partial class StronaKasyno : ContentPage
         if (FortuneWheel.Rotation>270)
         {
             
-            char[] tab = Preferences.Default.Get("OdblokowaneSoundbary","011000000").ToCharArray();
+            char[] tab = Preferences.Default.Get("OdblokowaneSoundbary", "01100000000").ToCharArray();
             tab[0] = '1';
             if (tab.Contains('0')) 
             {

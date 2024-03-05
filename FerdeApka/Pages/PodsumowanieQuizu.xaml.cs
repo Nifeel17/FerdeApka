@@ -22,7 +22,6 @@ public partial class PodsumowanieQuizu : ContentPage
 
     private void PowrotDoStronyQuizow(object sender, EventArgs e)
     {
-        Application.Current.MainPage = new NavigationPage(new StronaGlowna("StronaWybieraniaQuizow"));//zmienic
-        
+        Navigation.PopToRootAsync();
     }
 }

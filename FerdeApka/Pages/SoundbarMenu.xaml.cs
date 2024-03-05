@@ -21,7 +21,9 @@ public partial class SoundbarMenu : TabbedPage
             { 5, DzwiekWstydzSie },
             { 6, DzwiekNiePekaj },
             { 7, DzwiekKtoZRentOkradl },
-            { 8, DzwiekGebeSeZamknij }
+            { 8, DzwiekGebeSeZamknij },
+            { 9, DzwiekNieInteresujSie },
+            { 10, DzwiekObiecanka }
         };
 
         SlownikPrzyciskow = new Dictionary<int, Button>()
@@ -33,11 +35,13 @@ public partial class SoundbarMenu : TabbedPage
             { 5, SoundbarButtonDzwiekWstydzSie},
             { 6, SoundbarButtonDzwiekNiePekaj },
             { 7, SoundbarButtonDzwiekKtoZRentOkradl },
-            { 8, SoundbarButtonDzwiekGebeSeZamknij }
+            { 8, SoundbarButtonDzwiekGebeSeZamknij },
+            { 9, SoundbarButtonDzwiekNieInteresujSie },
+            { 10, SoundbarButtonDzwiekObiecanka }
         };
 
-        Preferences.Default.Set("OdblokowaneSoundbary",Preferences.Default.Get("OdblokowaneSoundbary","011000000"));
-        char[] tablicaOdbnlokowanych = Preferences.Default.Get("OdblokowaneSoundbary", "011000000").ToString().ToCharArray();
+        Preferences.Default.Set("OdblokowaneSoundbary",Preferences.Default.Get("OdblokowaneSoundbary", "01100000000"));
+        char[] tablicaOdbnlokowanych = Preferences.Default.Get("OdblokowaneSoundbary", "01100000000").ToString().ToCharArray();
 
         for (int i=1; i<SlownikPrzyciskow.Count()+1; i++)
         {
@@ -48,7 +52,7 @@ public partial class SoundbarMenu : TabbedPage
         }
 	}
 
-    private async void ZagrajDzwiek(object sender, EventArgs e)
+        private async void ZagrajDzwiek(object sender, EventArgs e)
     {
         int index = 1;
         foreach(var x in SlownikPrzyciskow)
