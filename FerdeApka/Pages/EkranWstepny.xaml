@@ -5,18 +5,21 @@
              Title="EkranWstepny"
              NavigationPage.HasNavigationBar="False"  
              NavigationPage.BackButtonTitle="">
-    <VerticalStackLayout BackgroundColor="{StaticResource ZoltyFerdkowy}">
-        <Image Source="logoferdek.png" Aspect="AspectFit" WidthRequest="250"></Image>
-        <Label Text="Ferde apka" FontAttributes="Bold" FontFamily="FontRegularny" HorizontalOptions="Center" FontSize="56" TextColor="Black"/>
-        <Label Text="Aplikacja specjalnie dla fanów Świata według Kiepskich!" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="10, 5, 10, 0" TextColor="Black" FontSize="24" FontAttributes="Bold"/>
-        <Frame BackgroundColor="{StaticResource NiebieskiFerdkowy}" CornerRadius="10" HeightRequest="15" Margin="20,0,20,0" Padding="0" HorizontalOptions="FillAndExpand" />
-        <Label Text="Najlepsze urywki z serialu, soundboard i fora dyskusyjne w jednym miejscu!" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="10, 10, 10, 0" TextColor="Black" FontSize="20"/>
-        <Button x:Name="login_with_facebook" Clicked="LoginWithFacebook" Text="Zaloguj się z Facebookiem" TextColor="White" FontSize="22"  BackgroundColor="{StaticResource NiebieskiFerdkowy}" Margin="20, 10, 20, 0" HeightRequest="60" CornerRadius="20"/>
-        <Button x:Name="login_with_account" Clicked="LoginWithAccount" Text="Zaloguj się z kontem" TextColor="White" FontSize="24"  BackgroundColor="{StaticResource RozowyFerdkowy}" Margin="20, 10, 20, 0" HeightRequest="60" CornerRadius="20"/>
+    <ScrollView>    
+        <VerticalStackLayout BackgroundColor="{StaticResource ZoltyFerdkowy}">
+            <Image Source="logoferdek.png" Aspect="AspectFit" WidthRequest="250"></Image>
+            <Label Text="Ferde apka" FontAttributes="Bold" FontFamily="FontRegularny" HorizontalOptions="Center" FontSize="56" TextColor="Black"/>
+            <Label Text="Aplikacja specjalnie dla fanów Świata według Kiepskich!" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="10, 5, 10, 0" TextColor="Black" FontSize="24" FontAttributes="Bold"/>
+            <Frame BackgroundColor="{StaticResource NiebieskiFerdkowy}" CornerRadius="10" HeightRequest="15" Margin="20,0,20,0" Padding="0" HorizontalOptions="FillAndExpand" />
+            <Label Text="Najlepsze urywki z serialu, soundboard i fora dyskusyjne w jednym miejscu!" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="10, 10, 10, 0" TextColor="Black" FontSize="20"/>
+            <Button x:Name="login_with_facebook" Clicked="LoginWithFacebook" Text="Zaloguj się z Facebookiem" TextColor="White" FontSize="22"  BackgroundColor="{StaticResource NiebieskiFerdkowy}" Margin="20, 10, 20, 0" HeightRequest="60" CornerRadius="20"/>
+            <Button x:Name="login_with_account" Clicked="LoginWithAccount" Text="Zaloguj się z kontem" TextColor="White" FontSize="24"  BackgroundColor="{StaticResource RozowyFerdkowy}" Margin="20, 10, 20, 0" HeightRequest="60" CornerRadius="20"/>
+            <Button x:Name="pass_login" Clicked="PassedLogin" Text="Pomin logowanie" TextColor="White" FontSize="24"  BackgroundColor="{StaticResource RozowyFerdkowy}" Margin="20, 10, 20, 0" HeightRequest="60" CornerRadius="20"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0, 10, 0, 0">
+                <Label Text="Nie masz jeszcze konta?" TextColor="Black" FontSize="18"/>
+                <Label Text="Zarejestruj sie!"  TextColor="{StaticResource NiebieskiFerdkowy}" FontSize="18" FontAttributes="Bold"/>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0, 10, 0, 0">
-            <Label Text="Nie masz jeszcze konta?" TextColor="Black" FontSize="18"/>
-            <Label Text="Zarejestruj sie!"  TextColor="{StaticResource NiebieskiFerdkowy}" FontSize="18" FontAttributes="Bold"/>
-        </StackLayout>
-    </VerticalStackLayout>
 </ContentPage>
